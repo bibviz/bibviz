@@ -70,6 +70,10 @@ blockquote.homosexual {
     border-bottom: 2px solid darkviolet;
 }
 
+blockquote.poll {
+    border-bottom: 2px solid steelblue;
+}
+
 blockquote div {
     text-align: right;
     padding: 0em 1em 0em 1em;
@@ -129,6 +133,12 @@ rect.nt {
 
 rect.selected {
     fill: white;
+}
+
+text {
+    fill: white;
+    stroke: white;
+    font-size: 24pt;
 }
 
 .clear {

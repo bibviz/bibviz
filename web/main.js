@@ -160,3 +160,35 @@ d3.json('./kjv.json', function (err, json) {
                 });
     });
 });
+
+// Pie charts
+function createPie(selector, data, colors, text) {
+    var pie = d3.layout.pie()
+        .value(function (d) {return d;})
+        .sort(null);
+
+    var arc = d3.svg.arc()
+        .innerRadius(50)
+        .outerRadius(100);
+
+    var chart = d3.select(selector)
+        .append('g')
+            .attr('transform', 'translate(100, 100)')
+        .datum(data).selectAll('path');
+
+    chart
+        .data(pie)
+        .enter().append('path')
+            .attr('fill', function(d, i) {return colors[i];})
+            .attr('d', arc)
+
+    d3.select(selector + ' g').append('text')
+            .attr('dy', '10')
+            .style('text-anchor', 'middle')
+            .text(text)
+}
+
+createPie('#pCreation', [46, 54], ['crimson', 'steelblue'], '46%');
+createPie('#pCreationCollege', [25, 75], ['crimson', 'steelblue'], '25%');
+createPie('#pChristian', [51.9, 23.3, 2.1, 22.7], ['crimson', '#E02B50', '#E34363', 'steelblue'], '77%');
+createPie('#pReligious', [40, 29, 31], ['crimson', '#E02B50', 'steelblue'], '69%');
