@@ -1,0 +1,211 @@
+body {
+    color: white;
+    background-color: #222;
+    background: #222 url(/txture.png) top left repeat;
+    font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Allura', sans-serif;
+    font-size: 48pt;
+    margin: 0 0 -0.8em 0;
+}
+
+h3 {
+    font-size: 100%;
+    padding-bottom: 6px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+a {
+    color: lightblue;
+}
+
+blockquote {
+    float: left;
+    color: #aaa;
+    position: relative;
+    background: rgba(255, 255, 255, 0.05);
+    font-size: 10pt;
+    padding: 1em 1em 1em 2em;
+    margin: 1em;
+    border-radius: 7px;
+    max-width: 524px;
+}
+
+blockquote:before {
+    content: '“';
+    font-size: 72pt;
+    font-family: sans-serif;
+    position: absolute;
+    top: -12px;
+    left: 6px;
+    opacity: 0.2;
+}
+
+blockquote:after {
+    content: '”';
+    font-size: 72pt;
+    font-family: sans-serif;
+    position: absolute;
+    right: 6px;
+    bottom: -58px;
+    opacity: 0.2;
+}
+
+blockquote.science {
+    border-bottom: 2px solid seagreen;
+}
+
+blockquote.violence {
+    border-bottom: 2px solid crimson;
+}
+
+blockquote.misogyny {
+    border-bottom: 2px solid hotpink;
+}
+
+blockquote.homosexual {
+    border-bottom: 2px solid darkviolet;
+}
+
+blockquote div {
+    text-align: right;
+    padding: 0em 1em 0em 1em;
+}
+
+rect {
+    stroke: none;
+    fill: steelblue;
+    transition: fill 0.2s;
+}
+
+rect:nth-child(even) {
+    fill: #3F75A2;
+}
+
+rect:hover {
+    cursor: pointer;
+    fill: lightblue;
+    transition: fill 0.2s;
+}
+
+rect.science {
+    fill: seagreen;
+}
+
+rect.science:hover {
+    fill: #6DAE89;
+}
+
+rect.violence {
+    fill: crimson;
+}
+
+rect.violence:hover {
+    fill: #E65B77;
+}
+
+rect.misogyny {
+    fill: hotpink;
+}
+
+rect.misogyny:hover {
+    fill: #FF96CA;
+}
+
+rect.homosexual {
+    fill: darkviolet;
+}
+
+rect.homosexual:hover {
+    fill: #B44DE0;
+}
+
+rect.nt {
+    opacity: 0.5;
+}
+
+rect.selected {
+    fill: white;
+}
+
+.clear {
+    clear: both;
+}
+
+.arc {
+    stroke: crimson;
+    stroke-width: 1;
+    fill: none;
+    position: absolute;
+    z-index: 1;
+}
+
+.arc:hover {
+    cursor: pointer;
+    stroke: pink;
+    z-index: 10;
+    /*transition: stroke 0.1s;*/
+}
+
+.subdued {
+    opacity: 0.5;
+}
+
+.block {
+    float: left;
+    background: rgba(255, 255, 255, 0.1);
+    width: 252px;
+    padding: 12px;
+    margin: 12px;
+    border-radius: 7px;
+}
+
+#container {
+    width: 1200px;
+    margin: auto;
+}
+
+#contradictionsTable {
+    font-size: 7pt;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+#contradictionsTable td {
+    width: 300px;
+}
+
+#contradictionsTable a {
+    text-decoration: none;
+}
+
+#footer {
+    text-align: center;
+    opacity: 0.4;
+}
+
+#selected {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 400px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 12px;
+    border-radius: 7px;
+    opacity: 0;
+}
+
+#donate {
+    position: fixed;
+    bottom: 0px;
+    right: 12px;
+    padding: 0.5em 1em;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
+}

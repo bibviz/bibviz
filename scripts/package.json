@@ -1,0 +1,19 @@
+{
+  "name": "bibviz-scripts",
+  "version": "1.0.0",
+  "description": "Scripts used to generate data for BibViz.com",
+  "main": "index.js",
+  "dependencies": {
+    "cheerio": "~0.12.1",
+    "natural": "~0.1.21",
+    "sleep": "~1.1.1",
+    "async": "~0.2.9",
+    "needle": "~0.5.9"
+  },
+  "devDependencies": {
+    "coffee-script": "~1.6.3"
+  },
+  "author": "",
+  "license": "MIT",
+  "private": true
+}

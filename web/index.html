@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <link href='http://fonts.googleapis.com/css?family=Allura' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+        <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+        <link href='/main.css' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <div id="container">
+            <h1>The Holy Bible</h1>
+            <h2><i class="icon-sitemap"></i> Contradictions</h2>
+            <svg id="contradictions" width="1200" height="500"></svg>
+            <h2><i class="icon-beaker"></i> Scientific Absurdities &amp; Historical Innacuracies</h2>
+            <svg id="science" width="1200" height="100"></svg>
+            <blockquote class="science">And there appeared another wonder in heaven; and behold a great red dragon, having seven heads and ten horns, and seven crowns upon his heads.<div>Revelation 12:3</div></blockquote>
+            <blockquote class="science">Being forty days tempted of the devil. And in those days he did eat nothing: and when they were ended, he afterward hungered.<div>Luke 4:2</div></blockquote>
+            <div class="clear"></div>
+            <h2><i class="icon-rocket"></i> Cruelty &amp; Violence</h2>
+            <svg id="violence" width="1200" height="100"></svg>
+            <blockquote class="violence">And everyone who would not seek the Lord, the God of Israel, was to be put to death, whether small or great, whether man or woman.<div>2 Chronicles 15:3</div></blockquote>
+            <blockquote class="violence">Six days may work be done; but in the seventh is the sabbath of rest, holy to the Lord whosoever doeth any work in the sabbath day, he shall surely be put to death.<div>Exodus 31:15</div></blockquote>
+            <div class="clear"></div>
+            <h2><i class="icon-female"></i> Misogyny, Violence &amp; Discrimination Against Women</h2>
+            <svg id="misogyny" width="1200" height="100"></svg>
+            <blockquote class="misogyny"> And the daughter of any priest, if she profane herself by playing the whore, she profaneth her father: she shall be burnt with fire.<div>Leviticus 21:9</div></blockquote>
+            <blockquote class="misogyny">But if this thing be true, and the tokens of virginity be not found for the damsel. Then... the men of her city shall stone her with stones that she die.<div>Deuteronomy 22:20-21</div></blockquote>
+            <div class="clear"></div>
+            <h2><i class="icon-heart"></i> Discrimination Against Homosexuals</h2>
+            <svg id="homosexual" width="1200" height="100"></svg>
+            <blockquote class="homosexual">If a man also lie with mankind, as he lieth with a woman, both of them have committed an abomination: they shall surely be put to death; their blood shall be upon them.<div>Leviticus 20:13</div></blockquote>
+            <blockquote class="homosexual">Men, leaving the natural use of the woman, burned in their lust one toward another; men with men working that which is unseemly, and receiving in themselves that recompence of their error which was meet.<div>Romans 1:27</div></blockquote>
+            <div class="clear"></div>
+            <h3>List of Contradictions Depicted Above (Click for more info)</h3>
+            <table id="contradictionsTable"></table>
+            <div id="footer">
+                <div>
+                    <p>
+                        This website aspires to be a beautiful and interactive resource for skeptics and believers alike to explore some of the more negative aspects of holy books.<br/>It was heavily inspired by the <a href="http://www.project-reason.org/gallery3/image/105/">Reason Project's poster of biblical contradictions</a>, which in turn was inspired by <a href="http://www.chrisharrison.net/index.php/Visualizations/BibleViz">Chris Harrison's Bible Visualizations</a>.
+                    </p>
+                    <p>
+                        This website and domain cost money to keep running, so please consider making a donation.
+                    </p>
+                </div>
+                <div>
+                    <div class="block">
+                        Data for the charts were collected from copyrighted material by the <a href="http://www.skepticsannotatedbible.com">Skeptic's Annotated Bible</a>.
+                    </div>
+                    <div class="block">
+                        This website is free and open source. <a href="">View and contribute to the project</a> on Github!
+                    </div>
+                    <div class="block">
+                        Quotes taken from the Authorized King James Version from 1769, which is a public domain work.
+                    </div>
+                    <div class="block">
+                        Please consider a donation to <a href="http://secular.org/civicrm/contribute/transact">The Secular Coalition for America</a>, <a href="http://www.amnesty.org/en/donate">Amnesty International</a>, <a href="https://www.doctorswithoutborders.org/donate/onetime.cfm">Doctors Without Borders</a>, or <a href="http://www.supportunicef.org/">UNICEF</a>.
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                Website and chart code copyright &copy; 2013. <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.
+                <br/><br/>
+                <img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a>
+            </div>
+        </div>
+        <div id="selected">Hover over a line or bar to show more info about a contradiction, chapter or book.</div>
+        <a id="donate" href="https://spb.io/0rgLYyRkJK">Donate</a>
+        <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+        <script src="/main.js" charset="utf-8"></script>
+
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-16567764-5', 'bibviz.com');
+          ga('send', 'pageview');
+
+        </script>
+    </body>
+</html>
