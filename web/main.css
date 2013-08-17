@@ -160,6 +160,10 @@ text {
     /*transition: stroke 0.1s;*/
 }
 
+.piechart {
+    stroke: #222;
+}
+
 .subdued {
     opacity: 0.5;
 }
@@ -171,11 +175,22 @@ text {
     padding: 12px;
     margin: 12px;
     border-radius: 7px;
+    border-bottom: 2px solid grey;
 }
 
 #container {
     width: 1200px;
     margin: auto;
+}
+
+#social {
+    text-align: center;
+    margin: 1em;
+}
+
+#social .spacer {
+    display: inline-block;
+    width: 24px;
 }
 
 #contradictionsTable {
@@ -206,6 +221,7 @@ text {
     padding: 12px;
     border-radius: 7px;
     opacity: 0;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
 #donate {

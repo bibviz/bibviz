@@ -36,12 +36,12 @@ function issueBarChart(selector, data) {
                 return d.relativeCount * 98 + 2
             })
             .on('click', function (d, i) {
-                // TODO: redirect to SAB page
                 window.location = 'http://www.skepticsannotatedbible.com/' + d.url;
             })
-            .on('mouseover', function (d) {
+            .on('mouseover', function (d, i) {
+                var testament = i >= 39 ? 'New Testament' : 'Old Testament';
                 d3.select('#selected')
-                    .html(d.name + ' - ' + d.verseCount + ' verses<br/><span class="subdued">' + d.refs.join(', ').substr(0, maxLength) + '</span>');
+                    .html(testament + ' - ' + d.name + ' - ' + d.verseCount + ' verses<br/><span class="subdued">' + d.refs.join(', ').substr(0, maxLength) + '</span>');
             });
 }
 
@@ -97,7 +97,8 @@ d3.json('./kjv.json', function (err, json) {
             .attr('width', 1)
             .attr('height', function (d, i) {return d.chapter.relativeLength * 100;})
             .on('click', function (d) {
-                selected = this;
+                var chapterNum = parseInt(d.chapter.name.split(' ')[1]);
+                window.location = 'http://www.biblegateway.com/passage/?search=' + d.book + ' ' + chapterNum + '&version=KJV'
             })
             .on('mouseover', function (d) {
                 if (!selected) {
@@ -162,7 +163,7 @@ d3.json('./kjv.json', function (err, json) {
 });
 
 // Pie charts
-function createPie(selector, data, colors, text) {
+function createPie(selector, data, colors, text, hovers) {
     var pie = d3.layout.pie()
         .value(function (d) {return d;})
         .sort(null);
@@ -173,6 +174,7 @@ function createPie(selector, data, colors, text) {
 
     var chart = d3.select(selector)
         .append('g')
+            .attr('class', 'piechart')
             .attr('transform', 'translate(100, 100)')
         .datum(data).selectAll('path');
 
@@ -181,14 +183,33 @@ function createPie(selector, data, colors, text) {
         .enter().append('path')
             .attr('fill', function(d, i) {return colors[i];})
             .attr('d', arc)
+            .on('mouseover', function (d, i) {
+                d3.select('#selected')
+                    .html(d.value + '% ' + hovers[i]);
+            });
 
     d3.select(selector + ' g').append('text')
             .attr('dy', '10')
             .style('text-anchor', 'middle')
-            .text(text)
+            .text(text);
 }
 
-createPie('#pCreation', [46, 54], ['crimson', 'steelblue'], '46%');
-createPie('#pCreationCollege', [25, 75], ['crimson', 'steelblue'], '25%');
-createPie('#pChristian', [51.9, 23.3, 2.1, 22.7], ['crimson', '#E02B50', '#E34363', 'steelblue'], '77%');
-createPie('#pReligious', [40, 29, 31], ['crimson', '#E02B50', 'steelblue'], '69%');
+createPie('#pCreation', [46, 54], ['crimson', 'steelblue'], '46%', [
+    'believe in young Earth creationism.',
+    'do not believe in young Earth creationism.'
+]);
+createPie('#pCreationCollege', [25, 75], ['crimson', 'steelblue'], '25%', [
+    'of college graduates believe in young Earth creationism.',
+    'of college graduates do not believe in young Earth creationism.'
+]);
+createPie('#pChristian', [51.9, 23.3, 2.1, 22.7], ['crimson', '#E02B50', '#E34363', 'steelblue'], '77%', [
+    'are Protestant/Other Christian',
+    'are Catholic',
+    'are Mormon',
+    'are not Christian'
+]);
+createPie('#pReligious', [40, 29, 31], ['crimson', '#E02B50', 'steelblue'], '69%', [
+    'are very religious',
+    'are moderately religious',
+    'are not religious'
+]);
