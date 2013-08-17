@@ -12,6 +12,16 @@ h1 {
     margin: 0 0 -0.8em 0;
 }
 
+h2 a, h3 a {
+    opacity: 0;
+}
+
+h2:hover a, h3:hover a {
+    opacity: 1;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
 h3 {
     font-size: 100%;
     padding-bottom: 6px;
@@ -95,35 +105,35 @@ rect:hover {
     transition: fill 0.3s;
 }
 
-rect.science {
+rect.science-chart {
     fill: seagreen;
 }
 
-rect.science:hover {
+rect.science-chart:hover {
     fill: #6DAE89;
 }
 
-rect.violence {
+rect.violence-chart {
     fill: crimson;
 }
 
-rect.violence:hover {
+rect.violence-chart:hover {
     fill: #E65B77;
 }
 
-rect.misogyny {
+rect.misogyny-chart {
     fill: hotpink;
 }
 
-rect.misogyny:hover {
+rect.misogyny-chart:hover {
     fill: #FF96CA;
 }
 
-rect.homosexual {
+rect.homosexual-chart {
     fill: darkviolet;
 }
 
-rect.homosexual:hover {
+rect.homosexual-chart:hover {
     fill: #B44DE0;
 }
 

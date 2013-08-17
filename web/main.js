@@ -70,22 +70,22 @@ d3.json('./kjv.json', function (err, json) {
     }
 
     d3.json('./misogyny.json', function (err, json) {
-        issueBarChart('misogyny', json);
+        issueBarChart('misogyny-chart', json);
     });
 
     d3.json('./science.json', function (err, json) {
-        issueBarChart('science', json);
+        issueBarChart('science-chart', json);
     });
 
     d3.json('./homosexual.json', function (err, json) {
-        issueBarChart('homosexual', json);
+        issueBarChart('homosexual-chart', json);
     });
 
     d3.json('./violence.json', function (err, json) {
-        issueBarChart('violence', json);
+        issueBarChart('violence-chart', json);
     });
 
-    var svg = d3.select('#contradictions');
+    var svg = d3.select('#contradictions-chart');
 
     // Draw chapter length bars
     svg.selectAll('rect')
