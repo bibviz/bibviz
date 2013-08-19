@@ -188,6 +188,15 @@ text {
     border-bottom: 2px solid grey;
 }
 
+.books {
+    text-align: center;
+}
+
+.books a {
+    display: inline-block;
+    margin-right: 18px;
+}
+
 #container {
     width: 1200px;
     margin: auto;
