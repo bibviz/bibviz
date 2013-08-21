@@ -159,15 +159,38 @@ text {
     stroke: crimson;
     stroke-width: 1;
     fill: none;
-    position: absolute;
-    z-index: 1;
 }
 
 .arc:hover {
     cursor: pointer;
     stroke: pink;
-    z-index: 10;
     /*transition: stroke 0.1s;*/
+}
+
+.filters {
+    position: absolute;
+    opacity: 0.5;
+}
+
+.filters select {
+    display: inline-block;
+    position: relative;
+    bottom: 2px;
+}
+
+.axis path, .axis line {
+    fill: none;
+    stroke: #303030;
+    shape-rendering: crispEdges;
+}
+
+.axis text {
+    fill: #555;
+    stroke: none;
+    font-family: sans-serif;
+    font-weight: normal;
+    font-size: 7pt;
+    shape-rendering: crispEdges;
 }
 
 .piechart {
