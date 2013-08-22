@@ -15,7 +15,7 @@ function getAbsoluteChapter(verse) {
     var parts = /^(\d?\s?[a-z]+)[\s.:]*(\d*):?(\d*)[-]?(\d*)/i.exec(verse);
     //console.log(parts);
 
-    var chapter = bookToChapter[parts[1]]
+    var chapter = bookToChapter[parts[1]];
     chapter = (chapter === undefined) ? bookToChapter[parts[1] + 's'] : chapter;
 
     return chapter + parseInt(parts[2]);
@@ -89,7 +89,7 @@ function renderContra() {
                     var ry = Math.min(r, 490);
 
                     if (!isNaN(start) && !isNaN(end) && !isNaN(r) && !isNaN(ry)) {
-                        path += 'M ' + start + ',399 A ' + r + ',' + ry + ' 0 0,1 ' + end + ',399 '
+                        path += 'M ' + start + ',399 A ' + r + ',' + ry + ' 0 0,1 ' + end + ',399 ';
                     }
                 }
             }
@@ -97,7 +97,7 @@ function renderContra() {
             return path;
         })
         .on('click', function (d) {
-            window.location = 'http://www.skepticsannotatedbible.com/contra/' + d.url
+            window.location = 'http://www.skepticsannotatedbible.com/contra/' + d.url;
         })
         .on('mouseover', function (d) {
             d3.select('#contradictions-chart')
@@ -120,8 +120,8 @@ function renderContra() {
     d3.select('#contradictions-chart')
         .selectAll('rect')
         .classed('selected', false);
-            
-    if (contraFilters.book != null) {
+
+    if (contraFilters.book !== null) {
         d3.select('#contradictions-chart')
             .selectAll('.b' + contraFilters.book.replace(/\s+/g, '').toLowerCase())
             .classed('selected', true);
@@ -148,19 +148,19 @@ function issueBarChart(selector, data) {
         .data(data)
         .enter().append('rect')
             .attr('class', function (d, i) {
-                return i >= 39 ? 'nt ' + selector : selector
+                return i >= 39 ? 'nt ' + selector : selector;
             })
             .attr('x', function (d, i) {
                 return bookToChapter[d.name];
             })
             .attr('y', function (d, i) {
-                return 98 - (d.relativeCount * 98)
+                return 98 - (d.relativeCount * 98);
             })
             .attr('width', function (d, i) {
                 return Math.max(1, bookToChapterCount[d.name] - 1);
             })
             .attr('height', function (d) {
-                return d.relativeCount * 98 + 2
+                return d.relativeCount * 98 + 2;
             })
             .on('click', function (d, i) {
                 window.location = 'http://www.skepticsannotatedbible.com/' + d.url;
@@ -233,7 +233,7 @@ d3.json('./kjv.json', function (err, json) {
             .attr('height', function (d, i) {return d.chapter.relativeLength * 100;})
             .on('click', function (d) {
                 var chapterNum = parseInt(d.chapter.name.split(' ')[1]);
-                window.location = 'http://www.biblegateway.com/passage/?search=' + d.book + ' ' + chapterNum + '&version=KJV'
+                window.location = 'http://www.biblegateway.com/passage/?search=' + d.book + ' ' + chapterNum + '&version=KJV';
             })
             .on('mouseover', function (d) {
                 /*contraFilters.book = null;
