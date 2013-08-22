@@ -50,7 +50,7 @@ function renderContra() {
                 for (i = 0; i < Math.min(d.refs.length - 1, 10); i++) {
                     match = /(\d?\s*\w+)/.exec(d.refs[i]);
 
-                    if (match && match[1] == contraFilters.book) {
+                    if (match && (match[1] == contraFilters.book || match[1] + 's' == contraFilters.book)) {
                         found = true;
                         break;
                     }
