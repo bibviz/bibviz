@@ -197,6 +197,10 @@ text {
     stroke: #222;
 }
 
+.piechart path:hover {
+    cursor: pointer;
+}
+
 .subdued {
     opacity: 0.5;
 }

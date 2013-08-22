@@ -267,7 +267,7 @@ d3.json('./kjv.json', function (err, json) {
 });
 
 // Pie charts
-function createPie(selector, data, colors, text, hovers) {
+function createPie(selector, data, colors, text, hovers, url) {
     var pie = d3.layout.pie()
         .value(function (d) {return d;})
         .sort(null);
@@ -290,6 +290,9 @@ function createPie(selector, data, colors, text, hovers) {
             .on('mouseover', function (d, i) {
                 d3.select('#selected')
                     .html(d.value + '% ' + hovers[i]);
+            })
+            .on('click', function (d) {
+                window.location.href = url;
             });
 
     d3.select(selector + ' g').append('text')
@@ -301,19 +304,19 @@ function createPie(selector, data, colors, text, hovers) {
 createPie('#pCreation', [46, 54], ['crimson', 'steelblue'], '46%', [
     'believe in young Earth creationism.',
     'do not believe in young Earth creationism.'
-]);
+], 'http://www.gallup.com/poll/155003/hold-creationist-view-human-origins.aspx');
 createPie('#pCreationCollege', [25, 75], ['crimson', 'steelblue'], '25%', [
     'of college graduates believe in young Earth creationism.',
     'of college graduates do not believe in young Earth creationism.'
-]);
+], 'http://www.gallup.com/poll/155003/hold-creationist-view-human-origins.aspx');
 createPie('#pChristian', [51.9, 23.3, 2.1, 22.7], ['crimson', '#E02B50', '#E34363', 'steelblue'], '77%', [
     'are Protestant/Other Christian',
     'are Catholic',
     'are Mormon',
     'are not Christian'
-]);
+], 'http://www.gallup.com/poll/159548/identify-christian.aspx');
 createPie('#pReligious', [40, 29, 31], ['crimson', '#E02B50', 'steelblue'], '69%', [
     'are very religious',
     'are moderately religious',
     'are not religious'
-]);
+], 'http://www.gallup.com/poll/159050/seven-americans-moderately-religious.aspx');
