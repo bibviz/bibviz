@@ -155,15 +155,15 @@ text {
     clear: both;
 }
 
-.arc {
+.arc path {
     stroke: crimson;
     stroke-width: 1;
     fill: none;
 }
 
-.arc:hover {
+.arc:hover path {
     cursor: pointer;
-    stroke: pink;
+    stroke: pink !important;
     /*transition: stroke 0.1s;*/
 }
 
@@ -172,15 +172,22 @@ text {
     opacity: 0.5;
 }
 
+.filters label {
+    display: inline-block;
+    width: 60px;
+}
+
 .filters select {
     display: inline-block;
     position: relative;
+    width: 120px;
     bottom: 2px;
+    margin-bottom: 4px;
 }
 
-.axis path, .axis line {
+.axis, .axis path, .axis line {
     fill: none;
-    stroke: #303030;
+    stroke: #262626;
     shape-rendering: crispEdges;
 }
 

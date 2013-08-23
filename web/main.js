@@ -7,8 +7,23 @@ var contra = null;
 var contraFilters = {
     book: null,         /* Specific book name */
     chapter: null,      /* Specific absolute chapter */
+    type: null,         /* Specific contradiction type */
     refCount: null,     /* Specific range of references */
-    crossBook: false    /* Only show cross-book contradictions */
+    crossBook: false,   /* Only show cross-book contradictions */
+    colorize: 'Crimson' /* Colorize the arcs */
+};
+
+// Available contradiction types
+var contraTypeFilters = {
+    'All': null,
+    'Count': /(how (many|old))|(sixth)/i,
+    'People': /(^\s*who)|(whom)|(whose)|(sons? of)|(mother)|(father)|(offspring)|(genealogy)|(related)/i,
+    'Time': /(^\s*when)|(what day)|(which came first)/i,
+    'Location': /(where)|(road)|(mountain)|(from the)/i,
+    'Death': /(heaven)|(hell)|(die)|(death)|(lifespan)|(congregation of the lord)|(live long)/i,
+    'Love': /(marry)|(marriage)|(love)|(sex)|(homosexual)|(conceive)|(wife)|(childbearing)|(adulterer)/i,
+    'God': /god/i,
+    'Jesus': /jesus/i
 };
 
 function getAbsoluteChapter(verse) {
@@ -61,6 +76,14 @@ function renderContra() {
                 }
             }
 
+            // Filter out the wrong type of item
+            if (contraFilters.type !== null) {
+                var regex = contraTypeFilters[contraFilters.type];
+                if (regex && !regex.test(d.desc)) {
+                    return false;
+                }
+            }
+
             return true;
         }),
         // Key function to compare values on insert/update/remove
@@ -68,10 +91,23 @@ function renderContra() {
             return d.desc;
         });
 
-    chart.enter().append('path')
+    chart.enter().append('g')
         .attr('class', 'arc')
-        .attr('d', function(d) {
-            var path = '';
+        .on('click', function (d) {
+            window.location = 'http://www.skepticsannotatedbible.com/contra/' + d.url;
+        })
+        .on('mouseover', function (d) {
+            d3.select('#contradictions-chart')
+                .selectAll('.arc')
+                .sort(function (a, b) {
+                    return (a == d) ? 1 : -1;
+                });
+
+            d3.select('#selected')
+                .html(d.desc + '<br/><span class="subdued">' + d.refs.join(', ').substr(0, maxLength) + '</span>');
+        })
+        .each(function (d, i) {
+            var group = d3.select(this);
 
             if (d.refs.length > 1) {
                 // Only show up to 10 refs, some have over 100...
@@ -89,25 +125,15 @@ function renderContra() {
                     var ry = Math.min(r, 490);
 
                     if (!isNaN(start) && !isNaN(end) && !isNaN(r) && !isNaN(ry)) {
-                        path += 'M ' + start + ',399 A ' + r + ',' + ry + ' 0 0,1 ' + end + ',399 ';
+                        var path = 'M ' + start + ',399 A ' + r + ',' + ry + ' 0 0,1 ' + end + ',399 ';
+                        group.append('path')
+                            .attr('d', path)
+                            .style('stroke', function (start, end) {
+                                return colorize(start, end);
+                            }(start, end));
                     }
                 }
             }
-
-            return path;
-        })
-        .on('click', function (d) {
-            window.location = 'http://www.skepticsannotatedbible.com/contra/' + d.url;
-        })
-        .on('mouseover', function (d) {
-            d3.select('#contradictions-chart')
-                .selectAll('.arc')
-                .sort(function (a, b) {
-                    return (a == d) ? 1 : -1;
-                });
-
-            d3.select('#selected')
-                .html(d.desc + '<br/><span class="subdued">' + d.refs.join(', ').substr(0, maxLength) + '</span>');
         });
 
     chart.exit()
@@ -128,21 +154,37 @@ function renderContra() {
     }
 }
 
+// Clip a value between min and max, inclusive
+function clip(min, value, max) {
+    return Math.max(min, Math.min(value, max));
+}
+
+// Chooses a color for an arc from start to end
+function colorize(start, end) {
+    var color = 'crimson';
+    var distance;
+
+    if (contraFilters.colorize == 'Rainbow') {
+        distance = Math.abs(end - start);
+        color = d3.hsl(distance / 1189 * 360, 0.7, 0.35);
+    }
+
+    return color;
+}
+
 function issueBarChart(selector, data) {
     var element = d3.select('#' + selector);
 
-    /*var yScale = d3.scale.linear().range([100, 0]);
-    var yAxis = d3.svg.axis()
-        .scale(yScale)
-        .orient('right')
-        .tickSize(-1200);
+    for (var i = 0; i < 4; i++) {
+        var y = 100 / 4 * i;
 
-    yScale.domain([0, d3.max(data, function (d) { return d.verseCount; })]);
-
-    element.append('g')
-        .attr('transform', 'translate(1175, 0)')
-        .attr('class', 'axis')
-        .call(yAxis.ticks(4));*/
+        element.append('line')
+            .attr('class', 'axis')
+            .attr('x1', 0)
+            .attr('x2', 1189)
+            .attr('y1', y)
+            .attr('y2', y);
+    }
 
     element.selectAll('rect')
         .data(data)
@@ -169,6 +211,25 @@ function issueBarChart(selector, data) {
                 var testament = i >= 39 ? 'New Testament' : 'Old Testament';
                 d3.select('#selected')
                     .html(testament + ' - ' + d.name + ' - ' + d.verseCount + ' verses<br/><span class="subdued">' + d.refs.join(', ').substr(0, maxLength) + '</span>');
+            });
+
+    element.selectAll('text')
+        .data(data)
+        .enter().append('text')
+            .attr('x', function (d) {
+                return bookToChapter[d.name] + 4;
+            })
+            .attr('y', function (d) {
+                return 109 - (d.relativeCount * 98);
+            })
+            .style('stroke', 'none')
+            .style('fill', 'white')
+            .style('font-size', '8pt')
+            .style('opacity', '0.4')
+            .text(function (d) {
+                if (bookToChapterCount[d.name] >= 30 && d.verseCount && (d.relativeCount * 98 + 2) > 16) {
+                    return d.verseCount;
+                }
             });
 }
 
@@ -264,6 +325,28 @@ d3.json('./kjv.json', function (err, json) {
         contraFilters.book = this.value != 'All' ? this.value : null;
         renderContra();
     });
+
+    var typeSelect = d3.select('#type-select');
+
+    typeSelect.selectAll('option').data(Object.keys(contraTypeFilters)).enter().append('option')
+        .text(function (d) {return d; });
+
+    typeSelect.on('change', function () {
+        contraFilters.type = this.value;
+
+        renderContra();
+    });
+
+    d3.select('#color-select')
+        .on('change', function () {
+            // Set the filter
+            contraFilters.colorize = this.value;
+
+            // Clear all current arcs so they get recreated
+            d3.select('#contradictions-chart').selectAll('.arc').remove();
+
+            renderContra();
+        });
 });
 
 // Pie charts
