@@ -247,15 +247,15 @@ function issueBarChart(selector, data) {
             });
 }
 
-d3.select('#selected').transition().delay(8000).duration(1000).style('opacity', 1.0);
+d3.select('#selected').transition().delay(7000).duration(1000).style('opacity', 1.0);
 
 d3.select('#filter-notice')
     .transition()
-        .delay(2000)
+        .delay(1000)
         .duration(1000)
         .style('opacity', 1.0)
     .transition()
-        .delay(5000)
+        .delay(4000)
         .duration(1000)
         .style('opacity', 0)
     .transition()
@@ -263,11 +263,11 @@ d3.select('#filter-notice')
 
 d3.select('#contra-notice')
     .transition()
-        .delay(5000)
+        .delay(4000)
         .duration(1000)
         .style('opacity', 1.0)
     .transition()
-        .delay(8000)
+        .delay(7000)
         .duration(1000)
         .style('opacity', 0)
     .transition()
