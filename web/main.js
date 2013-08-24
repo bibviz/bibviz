@@ -233,7 +233,31 @@ function issueBarChart(selector, data) {
             });
 }
 
-d3.select('#selected').transition().delay(2000).duration(1000).style('opacity', 1.0);
+d3.select('#selected').transition().delay(8000).duration(1000).style('opacity', 1.0);
+
+d3.select('#filter-notice')
+    .transition()
+        .delay(2000)
+        .duration(1000)
+        .style('opacity', 1.0)
+    .transition()
+        .delay(5000)
+        .duration(1000)
+        .style('opacity', 0)
+    .transition()
+        .style('display', 'none');
+
+d3.select('#contra-notice')
+    .transition()
+        .delay(5000)
+        .duration(1000)
+        .style('opacity', 1.0)
+    .transition()
+        .delay(8000)
+        .duration(1000)
+        .style('opacity', 0)
+    .transition()
+        .style('display', 'none');
 
 d3.json('./kjv.json', function (err, json) {
     bData = json;

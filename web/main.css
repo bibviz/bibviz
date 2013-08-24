@@ -294,3 +294,25 @@ text {
     box-shadow: 0px 0px 7px rgba(255, 255, 255, 1.0);
     transition: box-shadow 0.5s;
 }
+
+#filter-notice, #contra-notice {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 12px;
+    border-radius: 7px;
+    opacity: 0;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+#filter-notice {
+    top: 112px;
+    left: 50%;
+    margin-left: -400px;
+}
+
+#contra-notice {
+    top: 260px;
+    left: 50%;
+    width: 210px;
+    margin-left: -105px;
+}
