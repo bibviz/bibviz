@@ -23,7 +23,8 @@ var contraTypeFilters = {
     'Death': /(heaven)|(hell)|(die)|(death)|(lifespan)|(congregation of the lord)|(live long)/i,
     'Love': /(marry)|(marriage)|(love)|(sex)|(homosexual)|(conceive)|(wife)|(childbearing)|(adulterer)/i,
     'God': /god/i,
-    'Jesus': /jesus/i
+    'Jesus': /jesus/i,
+    'Other': null
 };
 
 function getAbsoluteChapter(verse) {
@@ -77,10 +78,23 @@ function renderContra() {
             }
 
             // Filter out the wrong type of item
+            var regex;
             if (contraFilters.type !== null) {
-                var regex = contraTypeFilters[contraFilters.type];
-                if (regex && !regex.test(d.desc)) {
-                    return false;
+                if (contraFilters.type == 'Other') {
+                    // Exclude any of the listed types except 'All' and 'Other'
+                    var keys = Object.keys(contraTypeFilters);
+                    for (i = 0; i < keys.length; i++) {
+                        regex = contraTypeFilters[keys[i]];
+                        if (regex && regex.test(d.desc)) {
+                            return false;
+                        }
+                    }
+                } else {
+                    // Include only this type
+                    regex = contraTypeFilters[contraFilters.type];
+                    if (regex && !regex.test(d.desc)) {
+                        return false;
+                    }
                 }
             }
 
