@@ -1,2 +1,4 @@
 plan.md
 scripts/node_modules
+web/build
+web/node_modules

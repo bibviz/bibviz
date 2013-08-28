@@ -1,0 +1,20 @@
+{
+  "locals": {
+    "title": "Bare minimum wintersmith site"
+  },
+  "jade": {
+    "pretty": true
+  },
+  "require": {
+    "moment": "moment"
+  },
+  "plugins": [
+    "./plugins/json.coffee",
+    "./plugins/blog.coffee",
+    "./node_modules/wintersmith-stylus",
+    "./node_modules/wintersmith-coffee"
+  ],
+  "ignore": [
+    "**/.DS_Store"
+  ]
+}

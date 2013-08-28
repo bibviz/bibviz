@@ -1,0 +1,6 @@
+doctype 5
+html
+    head
+        - var url = '0;URL=' + env.getArticles(contents)[0].url
+        meta(http-equiv="refresh", content=url)
+    body= page.html
