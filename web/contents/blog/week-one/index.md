@@ -3,7 +3,7 @@ title: BibViz Week One
 description: The first week of BibViz! About the project, news coverage and stats.
 author: Daniel
 image: views.png
-template: article.jade
+template: article.html
 date: 2013-08-26 18:00
 ---
 

@@ -1,5 +1,5 @@
 ---
-template: redirect.jade
+template: redirect.html
 ---
 
-Redirecting to first blog post...
+Redirecting to latest blog post...

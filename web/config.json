@@ -9,6 +9,7 @@
     "moment": "moment"
   },
   "plugins": [
+    "./plugins/nunjucks.coffee",
     "./plugins/json.coffee",
     "./plugins/blog.coffee",
     "./node_modules/wintersmith-stylus",
