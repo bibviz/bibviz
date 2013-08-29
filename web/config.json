@@ -2,8 +2,8 @@
   "locals": {
     "title": "Bare minimum wintersmith site"
   },
-  "jade": {
-    "pretty": true
+  "stylus": {
+    "compress": true
   },
   "require": {
     "moment": "moment"
