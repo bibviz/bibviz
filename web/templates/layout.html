@@ -36,8 +36,8 @@
         {% block header %}
             <nav>
                 <div class="container">
-                    <a href="/">Home</a>
-                    <a href="{{ env.getArticles(contents)[0].url }}">Blog</a>
+                    <a href="/">{% trans %}Home{% endtrans %}</a>
+                    <a href="{{ env.getArticles(contents)[0].url }}">{% trans %}Blog{% endtrans %}</a>
                 </div>
             </nav>
             <div class="sep"></div>
@@ -48,7 +48,7 @@
             {% endblock %}
             <div id="footer">
                 {% block footer %}{% endblock %}
-                Website and chart code copyright &copy; 2013 Daniel G. Taylor. <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">CC-BY-SA License</a>.
+                {% trans %}Website and chart code copyright &copy; 2013 Daniel G. Taylor. <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">CC-BY-SA License</a>.{% endtrans %}
                 <br/><br/>
                 <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">
                     <img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png"/>
@@ -58,11 +58,11 @@
                     <img src="/img/digitalocean-badge-white.png", alt="Proudly hosted by Digital Ocean"/>
                 </a>
                 <br/>
-                <span style="font-size: 60%;">Use coupon <em>OMGSSD10</em> for $10 free!</span>
+                <span style="font-size: 60%;">{% trans %}Use coupon <em>OMGSSD10</em> for $10 free!{% endtrans %}</span>
                 <br/><br/>
             </div>
             <a id="donate" href="https://spb.io/0rgLYyRkJK">
-                <i class="icon-credit-card"></i> Donate
+                <i class="icon-credit-card"></i> {% trans %}Donate{% endtrans %}
             </a>
         </div>
         <div id="fb-root"></div>

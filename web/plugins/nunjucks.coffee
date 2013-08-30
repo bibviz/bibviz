@@ -1,8 +1,29 @@
 {Environment, FileSystemLoader, Template} = require 'nunjucks'
+i18n = require 'i18n'
+path = require 'path'
+
+locales = ['en', 'de']
+
+i18n.configure
+    locales: locales
+    indent: '  '
+    directory: path.join(path.dirname(__dirname), 'locales')
+
+translate = (text) ->
+    text.replace /\{% trans %\}([^]*?)\{% endtrans %\}/gi, (match, p1) ->
+        i18n.__(p1)
+
+class I18nFileSystemLoader extends FileSystemLoader
+    getSource: (name) ->
+        source = super(name)
+
+        source.src = translate source.src
+
+        return source
 
 module.exports = (env, done) ->
     # Initialize the Nunjucks environment with where to load templates
-    nenv = new Environment(new FileSystemLoader env.templatesPath, autoescape: true)
+    nenv = new Environment(new I18nFileSystemLoader env.templatesPath, autoescape: true)
 
     ###
     Nunjucks template loader. This will load Nunjucks templates from a
@@ -80,11 +101,14 @@ module.exports = (env, done) ->
 
         # Render the template and return the result
         run: (context, templateStr) ->
+            # Translate the template
+            templateStr = translate(templateStr)
+
             # Get the current context variables
             locals = context.getVariables()
 
             # Load and render the template from the markdown
-            tmpl = new Template(templateStr)
+            tmpl = new Template templateStr, nenv, locals.page.filepath.full
             rendered = tmpl.render locals
 
             # Set the new markdown content and render to HTML
