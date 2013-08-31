@@ -364,17 +364,6 @@ d3.json('/data/kjv.json', function (err, json) {
     d3.json('/data/contra.json', function (err, json) {
         contra = json;
 
-        var html = '<tr>';
-        for (x = 0; x < json.length; x++) {
-            if ((x + 1) % 4 == 0) {
-                html += '</tr><tr>';
-            }
-
-            html += '<td><a href="http://www.skepticsannotatedbible.com/contra/' + json[x].url + '">' + (x + 1) + ' ' + json[x].desc + '</a></td>';
-        }
-        html += '</tr>';
-        d3.select('#contradictionsTable').html(html);
-
         renderContra();
     });
 

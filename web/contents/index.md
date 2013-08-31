@@ -87,7 +87,17 @@ scripts:
     <a href="http://www.amazon.com/gp/product/1569756775/ref=as_li_tf_il?ie=UTF8&camp=1789&creative=9325&creativeASIN=1569756775&linkCode=as2&tag=bibvicom-20"><img border="0" src="http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=1569756775&Format=_SL160_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=bibvicom-20" ></a><img src="http://ir-na.amazon-adsystem.com/e/ir?t=bibvicom-20&l=as2&o=1&a=1569756775" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
 </div>
 <h3>{% trans %}List of Contradictions Depicted Above (Click for more info){% endtrans %} <a id="contradictionList" href="#contradictionList"><i class="icon-link"></i></a></h3>
-<table id="contradictionsTable"></table>
+<table id="contradictionsTable">
+    <tr>
+    {# Render these here for better SEO instead of dynamically at page load #}
+    {% for contra in env.getContra() -%}
+        {% if loop.index % 4 == 0 -%}
+            </tr><tr>
+        {%- endif %}
+        <td><a href="http://www.skepticsannotatedbible.com/contra/{{ contra.url }}">{{ loop.index }} {{ _(contra.desc.trim()) }}</a></td>
+    {%- endfor %}
+    </tr>
+</table>
 <div class="footer">
     <div>
         <p>
