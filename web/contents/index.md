@@ -15,20 +15,20 @@ scripts:
     <div>
         <label for="book-select">{% trans %}Book:{% endtrans %}</label>
         <select id="book-select">
-            <option>{% trans %}All{% endtrans %}</option>
+            <option value="All">{% trans %}All{% endtrans %}</option>
         </select>
     </div>
     <div>
         <label for="type-select">{% trans %}Type:{% endtrans %}</label>
         <select id="type-select">
-            <option>{% trans %}All{% endtrans %}</option>
+            <option value="All">{% trans %}All{% endtrans %}</option>
         </select>
     </div>
     <div>
         <label for="color-select">{% trans %}Colors:{% endtrans %}</label>
         <select id="color-select">
-            <option>{% trans %}Crimson{% endtrans %}</option>
-            <option>{% trans %}Rainbow{% endtrans %}</option>
+            <option value="Crimson">{% trans %}Crimson{% endtrans %}</option>
+            <option value="Rainbow">{% trans %}Rainbow{% endtrans %}</option>
         </select>
     </div>
     <div>

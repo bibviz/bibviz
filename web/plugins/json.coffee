@@ -7,6 +7,11 @@ and usable as data files for AJAX requests.
 fs = require 'fs'
 
 module.exports = (env, callback) ->
+  # Expose data file info to templates
+  env.getContra = ->
+        require '../contents/data/contra'
+
+  # Setup a content handler to pass through JSON data files
   class JsonDataPlugin extends env.ContentPlugin
     constructor: (@filepath, src) ->
       @src = src

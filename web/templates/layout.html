@@ -36,7 +36,7 @@
         {% block header %}
             <nav>
                 <div class="container">
-                    <a href="/">{% trans %}Home{% endtrans %}</a>
+                    <a href="/index{{ '-' + lang }}.html">{% trans %}Home{% endtrans %}</a>
                     <a href="{{ env.getArticles(contents)[0].url }}">{% trans %}Blog{% endtrans %}</a>
                 </div>
             </nav>
