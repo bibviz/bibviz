@@ -291,6 +291,27 @@ d3.select('#contra-notice')
     .transition()
         .style('display', 'none');
 
+d3.select('#langSelect')
+    .on('change', function () {
+        var lang = this.value;
+
+        if (lang == 'new') {
+            return window.location = '/translate.html';
+        }
+
+        var path = window.location.pathname;
+
+        if (path[path.length - 1] == '/') {
+            window.location = path + 'index' + (lang == 'en' ? '' : '-' + lang) + '.html';
+        } else {
+            var match = /(.*?)(-.*)?\.html/gi.exec(path);
+            if (match) {
+                path = match[1];
+                window.location = match[1] + (lang == 'en' ? '' : '-' + lang) + '.html';
+            }
+        }
+    });
+
 d3.json('/data/kjv.json', function (err, json) {
     if (err) { console.log(err); }
     bData = json;

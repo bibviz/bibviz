@@ -3,6 +3,7 @@ title: BibViz Project - Bible Contradictions, Misogyny, Violence, Inaccuracies
 description: A beautiful and interactive resource to explore negative aspects of the Bible.
 image: /square.png
 template: layout.html
+translated: true
 scripts:
 - http://d3js.org/d3.v3.min.js
 - /scripts/main.js

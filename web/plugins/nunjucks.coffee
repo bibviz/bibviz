@@ -7,6 +7,10 @@ path = require 'path'
 
 # Supported locales
 locales = ['en', 'de']
+languages = [
+    'English',
+    'Deutsch'
+]
 
 # Set up locale path and i18n settings
 i18n.configure
@@ -39,6 +43,10 @@ module.exports = (env, done) ->
     # Expose translation data files to templates
     env.getTransTemplate = (lang) ->
         require "../locales/#{lang}"
+
+    # Expose supported languages and codes to templates
+    env.langCodes = locales
+    env.langNames = languages
 
     # Initialize the Nunjucks environment with where to load templates
     nenv = new Environment(new I18nFileSystemLoader env.templatesPath, autoescape: true)
@@ -198,10 +206,16 @@ module.exports = (env, done) ->
         # Markdown pages like normal, but modifies the output filename
         # and the template name to include a language code.
         genLangPages = (lang, done) ->
-            pages = ['index.md']
+            # Only translate pages which have translated: true in their metadata
+            pages = []
+            for page in contents._.pages
+                if page.metadata.translated
+                    console.log page
+                    pages.push page.filepath
 
-            genLangPage = (name, done) ->
-                page = MarkdownPage.fromFile full: path.join(env.contentsPath, name), (err, page) ->
+            genLangPage = (filepath, done) ->
+                name = filepath.relative
+                page = MarkdownPage.fromFile full: filepath.full, (err, page) ->
                     page.metadata.filename = "#{env.utils.stripExtension(name)}-#{lang}.html"
                     page.metadata.template = "#{page.metadata.template}-de"
                     rv["#{name}-#{lang}"] = page
