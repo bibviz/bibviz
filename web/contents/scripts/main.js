@@ -29,7 +29,9 @@ var contraTypeFilters = {
 
 // Returns true if a new tab should be opened from a click
 function newTab() {
-    return (window.event && ((event.which == 1 && (event.ctrlKey === true || event.metaKey === true) || (event.which == 2))));
+    // For now, let's always do a new tab/window and see how it works
+    return true;
+    //return (window.event && ((event.which == 1 && (event.ctrlKey === true || event.metaKey === true) || (event.which == 2))));
 }
 
 function getAbsoluteChapter(verse) {
