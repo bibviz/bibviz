@@ -36,6 +36,10 @@ class I18nFileSystemLoader extends FileSystemLoader
         return source
 
 module.exports = (env, done) ->
+    # Expose translation data files to templates
+    env.getTransTemplate = (lang) ->
+        require "../locales/#{lang}"
+
     # Initialize the Nunjucks environment with where to load templates
     nenv = new Environment(new I18nFileSystemLoader env.templatesPath, autoescape: true)
 

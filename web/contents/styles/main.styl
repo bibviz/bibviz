@@ -150,6 +150,20 @@ text
 .clear
     clear both
 
+.btn
+    display inline-block
+    padding 1em
+    color white
+    background crimson
+    border-radius 7px
+    text-decoration none
+    text-shadow -1px -1px 0px rgba(0, 0, 0, 0.3), 1px 1px 0px rgba(255, 255, 255, 0.3)
+    box-shadow 1px 1px 3px rgba(0, 0, 0, 0.5)
+    transition background-color 0.3s
+
+    &:hover
+        background lighten(crimson, 15%)
+
 .arc
     path
         stroke crimson
@@ -242,6 +256,19 @@ text
         width 300px
     a
         text-decoration none
+
+textarea
+    padding 1%
+    border-radius 6px
+
+#translations
+    textarea
+        width 46%
+        height 26px
+        margin-bottom 1em
+
+        &:first-child
+            margin-right 24px
 
 #footer, .footer
     text-align center
