@@ -5,6 +5,12 @@ author: Daniel
 image: views.png
 template: article.html
 date: 2013-08-26 18:00
+books:
+- '1449398588'
+- '032182010X'
+- '1118168445'
+- '0470124741'
+- '1449321887'
 ---
 
 BibViz: Week One
@@ -15,7 +21,7 @@ Who, What and Why
 -----------------
 The idea for BibViz formed in early August 2013 while browsing around for the [Reason Project's biblical contradictions poster](http://www.project-reason.org/gallery3/image/105/) after a heated religious debate about biblical literalism and public policy / school programs. I was able to find it, but once again saw that it hadn't been updated to remove duplicate entries and was difficult to navigate or do much with. When a friend suggested that I could do better the thought nagged at the back of my mind for the next few days.
 
-I did some research and found the excellent [Skeptic's Annotated Bible](http://www.skepticsannotatedbible.com) website by Steve Wells, who deserves all credit for crawling through the Bible and finding the various contradictions, violent passages and more. Using his website as a resource I was able to data mine the information with a few quick [Node.js](http://nodejs.org/) scripts and massage the data into a usable format for myself. Then I was able to create a quick basic website and generate charts using [D3.js](http://d3js.org/), an open source data visualization library with support for interactive elements through SVG and Javascript.
+I did some research and found the excellent [Skeptic's Annotated Bible](http://www.skepticsannotatedbible.com) website by Steve Wells, who deserves all credit for crawling through the Bible and finding the various contradictions, violent passages and more. Using his website as a resource I was able to data mine the information with a few quick [Node.js](http://nodejs.org/) and [Coffeescript](http://coffeescript.org/) scripts and massage the data into a usable format for myself. Then I was able to create a quick basic website and generate charts using [D3.js](http://d3js.org/), an open source data visualization library with support for interactive elements through SVG and Javascript.
 
 From start to finish it took about a week to get a decent looking site, with some final touches for social media markup and a few minor fixes after launch. This included research time, time learning some Node.js libraries, time learning D3.js, etc. Today I continue to work on the site, adding features and fixing issues that people find and bring to my attention. I'm working on adding more content (like this blog) and setting up a framework for translations into various languages through static site generators.
 

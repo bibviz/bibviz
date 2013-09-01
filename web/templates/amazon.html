@@ -1,0 +1,5 @@
+{% macro books(list) %}
+    {% for asin in list %}
+        <a href="http://www.amazon.com/gp/product/{{ asin }}/ref=as_li_tf_il?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN={{ asin }}&amp;linkCode=as2&amp;tag=bibvicom-20"><img border="0" src="http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN={{ asin }}&amp;Format=_SL160_&amp;ID=AsinImage&amp;MarketPlace=US&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=bibvicom-20" ></a><img src="http://ir-na.amazon-adsystem.com/e/ir?t=bibvicom-20&amp;l=as2&amp;o=1&amp;a={{ asin }}" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+    {% endfor %}
+{% endmacro %}
