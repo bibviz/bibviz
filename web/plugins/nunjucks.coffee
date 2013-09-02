@@ -143,6 +143,23 @@ module.exports = (env, done) ->
 
     nenv.addExtension 'MdTag', new MdTag()
 
+    nenv.addFilter 'langUrl', (url, langCode) ->
+        if url[url.length - 1] is '/'
+            if langCode isnt 'en'
+                url += "index-#{langCode}.html"
+            else
+                url += 'index.html'
+
+        match = /(.*?)(-.*)?\.html/gi.exec url
+        if match
+            langSpec = if langCode isnt 'en' then "-#{langCode}" else ''
+            url = "#{match[1]}#{langSpec}.html"
+
+        if url.substr(url.length - 10, url.length - 1) is 'index.html'
+            url = url.substr(0, url.length - 10)
+
+        return url
+
     env.registerTemplatePlugin("**/*.*(html)", NunjucksTemplate);
 
     ###

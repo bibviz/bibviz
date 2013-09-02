@@ -58,6 +58,13 @@
             {% endblock %}
             <div id="footer">
                 {% block footer %}{% endblock %}
+                {% if page.metadata.translated %}
+                    <div class="languageLinks">
+                        {% for name in env.langNames %}
+                            <a href="{{ page.url | langUrl(env.langCodes[loop.index0]) }}">{{ name }}</a>
+                        {% endfor %}
+                    </div>
+                {% endif %}
                 {% trans %}Website and chart code copyright &copy; 2013 Daniel G. Taylor. <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">CC-BY-SA License</a>.{% endtrans %}
                 <br/><br/>
                 <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">
