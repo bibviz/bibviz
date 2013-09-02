@@ -227,7 +227,7 @@ module.exports = (env, done) ->
             pages = []
             for page in contents._.pages
                 if page.metadata.translated
-                    console.log page
+                    # console.log page
                     pages.push page.filepath
 
             genLangPage = (filepath, done) ->
