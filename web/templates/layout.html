@@ -30,6 +30,9 @@
         <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Raleway"/>
         <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css"/>
         <link rel="stylesheet" type="text/css" href="/styles/main.css?v=2"/>
+        {% for style in page.metadata.styles or [] %}
+            <link rel="stylesheet" type="text/css" href="{{ style }}"></script>
+        {% endfor %}
     </head>
         
     <body>
