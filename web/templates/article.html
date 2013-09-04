@@ -27,7 +27,10 @@
         <div class="book-panel">
             {% import 'amazon.html' as amazon %}
             {% set books = page.metadata.books and page.metadata.books or [] %}
-            {{ amazon.books(books.concat(['0988245108', '0988245116', '1416594795', '0618918248', '0446697966', '0307278778', '0143038338', '1569755671', '1569756775'])) }}
+            {{ amazon.books(books) }}
+            {% if page.metadata.booksReplace != true %}
+                {{ amazon.books(['0988245108', '0988245116', '1416594795', '0618918248', '0446697966', '0307278778', '0143038338', '1569755671', '1569756775']) }}
+            {% endif %}
         </div>
     </div>
     <div class="clear"></div>
