@@ -85,7 +85,7 @@ scripts:
     <tr>
     {# Render these here for better SEO instead of dynamically at page load #}
     {% for contra in env.getContra() -%}
-        {% if loop.index % 4 == 0 -%}
+        {% if loop.index0 != 0 and loop.index0 % 4 == 0 -%}
             </tr><tr>
         {%- endif %}
         <td><a href="http://www.skepticsannotatedbible.com/contra/{{ contra.url }}">{{ loop.index }} {{ _(contra.desc.trim()) }}</a></td>
