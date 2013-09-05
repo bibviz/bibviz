@@ -33,6 +33,8 @@
         {% for style in page.metadata.styles or [] %}
             <link rel="stylesheet" type="text/css" href="{{ style }}"></script>
         {% endfor %}
+
+        <link rel="alternate" type="application/atom+xml" title="Blog" href="/atom.xml" />
     </head>
         
     <body>

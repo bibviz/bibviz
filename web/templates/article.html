@@ -13,6 +13,7 @@
                 <a href="{{ article.url }}">{{ article.title }}</a>
             </p>
         {% endfor %}
+        <a id="feedButton" href="/atom.xml"><i class="icon-rss-sign"></i> Subscribe</a>
     </div>
     <div class="left article" style="width: 800px">
         <div class="right">{{ moment(page.metadata.date).format('D MMMM YYYY') }}</div>
