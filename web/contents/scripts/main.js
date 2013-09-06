@@ -13,6 +13,10 @@ var contraFilters = {
     colorize: 'Crimson' /* Colorize the arcs */
 };
 
+if (!window.maxArcs) {
+    var maxArcs = 10;
+}
+
 // Available contradiction types
 var contraTypeFilters = {
     'All': null,
@@ -29,9 +33,7 @@ var contraTypeFilters = {
 
 // Returns true if a new tab should be opened from a click
 function newTab() {
-    // For now, let's always do a new tab/window and see how it works
-    return true;
-    //return (window.event && ((event.which == 1 && (event.ctrlKey === true || event.metaKey === true) || (event.which == 2))));
+    return (window.event && ((event.which == 1 && (event.ctrlKey === true || event.metaKey === true) || (event.which == 2))));
 }
 
 function getAbsoluteChapter(verse) {
@@ -115,7 +117,8 @@ function renderContra() {
     chart.enter().append('g')
         .attr('class', 'arc')
         .on('click', function (d) {
-            var url = 'http://www.skepticsannotatedbible.com/contra/' + d.url;
+            var url = '/' + slugg(d.desc) + '-sab.html';
+            //var url = 'http://www.skepticsannotatedbible.com/contra/' + d.url;
 
             // Handle [cmd/ctrl]+click and middle click to open a new tab
             if (newTab()) {
@@ -139,7 +142,7 @@ function renderContra() {
 
             if (d.refs.length > 1) {
                 // Only show up to 10 refs, some have over 100...
-                for (x = 0; x <= Math.min(10, d.refs.length - 2); x++) {
+                for (x = 0; x <= Math.min(maxArcs, d.refs.length - 2); x++) {
                     var start = getAbsoluteChapter(d.refs[x]);
                     var end = getAbsoluteChapter(d.refs[x + 1]);
 
@@ -384,11 +387,17 @@ d3.json('/data/kjv.json', function (err, json) {
                     .html(d.section + ' - ' + d.book + ' - ' + d.chapter.name + '<br/><span class="subdued">' + d.chapter.wordCount + ' words, ' + d.chapter.charCount + ' characters</span>');
             });
 
-    d3.json('/data/contra.json', function (err, json) {
-        contra = json;
+    if (window._contradictions !== undefined) {
+        contra = _contradictions;
 
         renderContra();
-    });
+    } else {
+        d3.json('/data/contra.json', function (err, json) {
+            contra = json;
+
+            renderContra();
+        });
+    }
 
     bookSelect.on('change', function() {
         contraFilters.book = this.value != 'All' ? this.value : null;
@@ -476,3 +485,100 @@ createPie('#pReligious', [40, 29, 31], ['crimson', '#E02B50', 'steelblue'], '69%
     'are moderately religious',
     'are not religious'
 ], 'http://www.gallup.com/poll/159050/seven-americans-moderately-religious.aspx');
+
+
+// ------------------------------------------
+
+var defaultSeparator = '-';
+
+function slugg(string, separator, toStrip) {
+
+  // Separator is optional
+  if (typeof separator === 'undefined') separator = defaultSeparator;
+
+  // Separator might be omitted and toStrip in its place
+  if (separator instanceof RegExp) {
+    toStrip = separator;
+    separator = defaultSeparator;
+  }
+
+  // Only a separator was passed
+  if (typeof toStrip === 'undefined') toStrip = new RegExp('');
+
+  // Swap out non-english characters for their english equivalent
+  for (var i = 0, len = string.length; i < len; i++) {
+    if (chars[string.charAt(i)]) {
+      string = string.replace(string.charAt(i), chars[string.charAt(i)]);
+    }
+  }
+
+  string = string
+    // Make lower-case
+    .toLowerCase()
+    // Strip chars that shouldn't be replaced with separator
+    .replace(toStrip, '')
+    // Replace non-word characters with separator
+    .replace(/[\W|_]+/g, separator)
+    // Strip dashes from the beginning
+    .replace(new RegExp('^' + separator + '+'), '')
+    // Strip dashes from the end
+    .replace(new RegExp(separator + '+$'), '');
+
+  return string;
+
+}
+
+// Conversion table. Modified version of:
+// https://github.com/dodo/node-slug/blob/master/src/slug.coffee
+var chars = slugg.chars = {
+  // Latin
+  'À': 'A', 'Á': 'A', 'Â': 'A', 'Ã': 'A', 'Ä': 'A', 'Å': 'A', 'Æ': 'AE',
+  'Ç': 'C', 'È': 'E', 'É': 'E', 'Ê': 'E', 'Ë': 'E', 'Ì': 'I', 'Í': 'I',
+  'Î': 'I', 'Ï': 'I', 'Ð': 'D', 'Ñ': 'N', 'Ò': 'O', 'Ó': 'O', 'Ô': 'O',
+  'Õ': 'O', 'Ö': 'O', 'Ő': 'O', 'Ø': 'O', 'Ù': 'U', 'Ú': 'U', 'Û': 'U',
+  'Ü': 'U', 'Ű': 'U', 'Ý': 'Y', 'Þ': 'TH', 'ß': 'ss', 'à': 'a', 'á': 'a',
+  'â': 'a', 'ã': 'a', 'ä': 'a', 'å': 'a', 'æ': 'ae', 'ç': 'c', 'è': 'e',
+  'é': 'e', 'ê': 'e', 'ë': 'e', 'ì': 'i', 'í': 'i', 'î': 'i', 'ï': 'i',
+  'ð': 'd', 'ñ': 'n', 'ò': 'o', 'ó': 'o', 'ô': 'o', 'õ': 'o', 'ö': 'o',
+  'ő': 'o', 'ø': 'o', 'ù': 'u', 'ú': 'u', 'û': 'u', 'ü': 'u', 'ű': 'u',
+  'ý': 'y', 'þ': 'th', 'ÿ': 'y', 'ẞ': 'SS', 'œ': 'oe', 'Œ': 'OE',
+  // Greek
+  'α': 'a', 'β': 'b', 'γ': 'g', 'δ': 'd', 'ε': 'e', 'ζ': 'z', 'η': 'h',
+  'θ': '8', 'ι': 'i', 'κ': 'k', 'λ': 'l', 'μ': 'm', 'ν': 'n', 'ξ': '3',
+  'ο': 'o', 'π': 'p', 'ρ': 'r', 'σ': 's', 'τ': 't', 'υ': 'y', 'φ': 'f',
+  'χ': 'x', 'ψ': 'ps', 'ω': 'w', 'ά': 'a', 'έ': 'e', 'ί': 'i', 'ό': 'o',
+  'ύ': 'y', 'ή': 'h', 'ώ': 'w', 'ς': 's', 'ϊ': 'i', 'ΰ': 'y', 'ϋ': 'y',
+  'ΐ': 'i', 'Α': 'A', 'Β': 'B', 'Γ': 'G', 'Δ': 'D', 'Ε': 'E', 'Ζ': 'Z',
+  'Η': 'H', 'Θ': '8', 'Ι': 'I', 'Κ': 'K', 'Λ': 'L', 'Μ': 'M', 'Ν': 'N',
+  'Ξ': '3', 'Ο': 'O', 'Π': 'P', 'Ρ': 'R', 'Σ': 'S', 'Τ': 'T', 'Υ': 'Y',
+  'Φ': 'F', 'Χ': 'X', 'Ψ': 'PS', 'Ω': 'W', 'Ά': 'A', 'Έ': 'E', 'Ί': 'I',
+  'Ό': 'O', 'Ύ': 'Y', 'Ή': 'H', 'Ώ': 'W', 'Ϊ': 'I', 'Ϋ': 'Y',
+  // Turkish
+  'ş': 's', 'Ş': 'S', 'ı': 'i', 'İ': 'I', 'ğ': 'g', 'Ğ': 'G',
+  // Russian
+  'а': 'a', 'б': 'b', 'в': 'v', 'г': 'g', 'д': 'd', 'е': 'e', 'ё': 'yo',
+  'ж': 'zh', 'з': 'z', 'и': 'i', 'й': 'j', 'к': 'k', 'л': 'l', 'м': 'm',
+  'н': 'n', 'о': 'o', 'п': 'p', 'р': 'r', 'с': 's', 'т': 't', 'у': 'u',
+  'ф': 'f', 'х': 'h', 'ц': 'c', 'ч': 'ch', 'ш': 'sh', 'щ': 'sh', 'ъ': 'u',
+  'ы': 'y', 'э': 'e', 'ю': 'yu', 'я': 'ya', 'А': 'A', 'Б': 'B',
+  'В': 'V', 'Г': 'G', 'Д': 'D', 'Е': 'E', 'Ё': 'Yo', 'Ж': 'Zh', 'З': 'Z',
+  'И': 'I', 'Й': 'J', 'К': 'K', 'Л': 'L', 'М': 'M', 'Н': 'N', 'О': 'O',
+  'П': 'P', 'Р': 'R', 'С': 'S', 'Т': 'T', 'У': 'U', 'Ф': 'F', 'Х': 'H',
+  'Ц': 'C', 'Ч': 'Ch', 'Ш': 'Sh', 'Щ': 'Sh', 'Ъ': 'U', 'Ы': 'Y',
+  'Э': 'E', 'Ю': 'Yu', 'Я': 'Ya',
+  // Ukranian
+  'Є': 'Ye', 'І': 'I', 'Ї': 'Yi', 'Ґ': 'G',
+  'є': 'ye', 'і': 'i', 'ї': 'yi', 'ґ': 'g',
+  // Czech
+  'č': 'c', 'ď': 'd', 'ě': 'e', 'ň': 'n', 'ř': 'r', 'š': 's',
+  'ť': 't', 'ů': 'u', 'ž': 'z', 'Č': 'C', 'Ď': 'D', 'Ě': 'E',
+  'Ň': 'N', 'Ř': 'R', 'Š': 'S', 'Ť': 'T', 'Ů': 'U', 'Ž': 'Z',
+  // Polish
+  'ą': 'a', 'ć': 'c', 'ę': 'e', 'ł': 'l', 'ń': 'n', 'ś': 's',
+  'ź': 'z', 'ż': 'z', 'Ą': 'A', 'Ć': 'C', 'Ę': 'e', 'Ł': 'L',
+  'Ń': 'N', 'Ś': 'S', 'Ź': 'Z', 'Ż': 'Z',
+  // Latvian
+  'ā': 'a', 'ē': 'e', 'ģ': 'g', 'ī': 'i', 'ķ': 'k', 'ļ': 'l',
+  'ņ': 'n', 'ū': 'u', 'Ā': 'A', 'Ē': 'E', 'Ģ': 'G', 'Ī': 'i',
+  'Ķ': 'k', 'Ļ': 'L', 'Ņ': 'N', 'Ū': 'u'
+}

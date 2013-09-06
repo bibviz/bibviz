@@ -88,7 +88,7 @@ scripts:
         {% if loop.index0 != 0 and loop.index0 % 4 == 0 -%}
             </tr><tr>
         {%- endif %}
-        <td><a href="http://www.skepticsannotatedbible.com/contra/{{ contra.url }}">{{ loop.index }} {{ _(contra.desc.trim()) }}</a></td>
+        <td><a href="/{{ env.slug(contra.desc) }}-sab.html">{{ loop.index }} {{ _(contra.desc.trim()) }}</a></td>
     {%- endfor %}
     </tr>
 </table>

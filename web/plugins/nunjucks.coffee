@@ -2,6 +2,7 @@ async = require 'async'
 fs = require 'fs'
 i18n = require 'i18n'
 path = require 'path'
+slugg = require 'slugg'
 
 {Environment, FileSystemLoader, Template} = require 'nunjucks'
 
@@ -47,6 +48,8 @@ module.exports = (env, done) ->
     # Expose supported languages and codes to templates
     env.langCodes = locales
     env.langNames = languages
+
+    env.slug = slugg
 
     # Initialize the Nunjucks environment with where to load templates
     nenv = new Environment(new I18nFileSystemLoader env.templatesPath, autoescape: true)
@@ -204,19 +207,19 @@ module.exports = (env, done) ->
 
     env.registerView 'template', i18nTemplateView
 
+    # Find the Markdown page plugin - this is pretty hacky
+    MarkdownPage = null
+    for plugin in env.contentPlugins
+        if plugin.group is 'pages'
+            MarkdownPage = plugin.class
+            break
+
     ###
     Generate MarkdownPage instances with updated filename and
     template values for all supported languages. Pages are stored
     in the same location but have a new name, like page-de.html.
     ###
     env.registerGenerator 'trans', (contents, done) ->
-        # Find the Markdown page plugin - this is pretty hacky
-        MarkdownPage = null
-        for plugin in env.contentPlugins
-            if plugin.group is 'pages'
-                MarkdownPage = plugin.class
-                break
-
         rv = {}
 
         # Generate pages in each available language. This generates
@@ -245,5 +248,98 @@ module.exports = (env, done) ->
         # Process each language, ignoring English as it's the default
         async.each locales.filter((x) -> x isnt 'en'), genLangPages, (err) ->
             done(err, rv)
+
+    # Generate a page for each contradiction
+    env.registerGenerator 'contra', (contents, done) ->
+        rv = {}
+
+        kjv = env.getFullBible()
+        {bookNames} = require '../../scripts/common'
+        bookMap = {}
+        i = 0
+        for section in kjv.sections
+            for book in section.books
+                bookMap[bookNames[i].toLowerCase()] = book
+                i++
+
+        env.getRefLink = (ref) ->
+            parts = /^(\d?\s?[a-z]+)[\s.:]*(\d*):?(\d*)[-]?(\d*)/i.exec ref
+            
+            if not parts
+                console.log "Bad ref: #{ref}"
+                return ''
+
+            bookName = parts[1].toLowerCase()
+            if bookName is 'psalm' then bookName = 'psalms'
+
+            return "http://www.biblegateway.com/passage/?search=#{bookName}+#{parts[2]}&amp;version=AKJV;NIV;NLT";
+
+        env.getVerses = (ref, context=0) ->
+            parts = /^(\d?\s?[a-z]+)[\s.:]*(\d*):?(\d*)[-]?(\d*)/i.exec ref
+            
+            if not parts
+                console.log "Bad ref: #{ref}"
+                return ['Reference not found...']
+
+            bookName = parts[1].toLowerCase()
+            if bookName is 'psalm' then bookName = 'psalms'
+
+            book = bookMap[bookName]
+
+            if not book
+                console.log "Bad book #{ref}"
+                return ['Book not found...']
+
+            chapter = book.chapters[parts[2] - 1]
+
+            if not chapter
+                console.log "Bad chapter #{ref}"
+                return ['Chapter not found...']
+
+            start = if parts[3] then parts[3] - 1 else 0
+            end = if parts[4] then parseInt(parts[4]) else parseInt(parts[3])
+
+            if context
+                start = Math.max(0, start - context)
+                end = Math.min(chapter.verses.length, end + context)
+
+            return chapter.verses.slice(start, end).map (item) -> item.replace(/^#/, '').trim()
+
+        env.randomAdBooks = (count=6) ->
+            choices = ['0988245108', '0988245116', '1416594795', '0618918248', '0446697966',
+                       '0307278778', '0143038338', '1569755671', '1569756775', 'B009SJZNS8',
+                       '0062225790', '1587314525', '1439171211', '0809059185', 'B00C2TWWUI',
+                       'B00EY3DN58', '1482773341', '0557709911', '1939578094', '1478716568',
+                       '161614727X', '0814410960', '0805243011', '1608681831', '0745953220',
+                       '0910309205', '1908675055', '0385527071', '0061335304', '0578003880',
+                       '0446697966', '161614551X', '006167012X', '1616144130', '1616141689',
+                       '0802778372', '0970950519']
+            selected = []
+
+            while selected.length < count
+                item = choices.splice Math.floor(Math.random() * choices.length), 1
+                selected.push item
+            
+            return selected
+
+        contradictions = env.getContra()
+        #console.log contradictions
+
+        for contra in contradictions
+            meta =
+                title: contra.desc.trim().replace /"/g, '&quot;'
+                filename: slugg(contra.desc) + '-sab.html'
+                template: 'contradiction.html'
+                contra: contra
+
+            #console.log contra.desc
+            #console.log meta.filename
+
+            page = new MarkdownPage {full: '', relative: ''}, meta, ''
+
+            rv[meta.filename] = page
+            #break
+
+        done(null, rv)
 
     done()

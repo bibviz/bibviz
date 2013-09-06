@@ -8,8 +8,11 @@ fs = require 'fs'
 
 module.exports = (env, callback) ->
   # Expose data file info to templates
+  env.getFullBible = ->
+    require '../contents/data/kjv-full'
+
   env.getContra = ->
-        require '../contents/data/contra'
+    require '../contents/data/contra'
 
   # Setup a content handler to pass through JSON data files
   class JsonDataPlugin extends env.ContentPlugin

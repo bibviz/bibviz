@@ -49,6 +49,9 @@ h2
 h2 a, h3 a
     opacity 0
 
+h2 a.btn
+    opacity 1
+
 h2:hover a, h3:hover a
     opacity 1
     text-decoration none
@@ -171,6 +174,26 @@ text
 
     &:hover
         background lighten(crimson, 15%)
+
+.btn-small
+    padding 0.5em
+    font-size 70%
+    border-radius 5px
+
+.context
+    max-width 18px
+    white-space nowrap
+    overflow hidden
+    transition max-width 0.5s
+
+    .label
+        display none
+
+    &:hover
+        max-width 150px
+
+        .label
+            display inline-block
 
 .arc
     path
