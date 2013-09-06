@@ -1,0 +1,65 @@
+{% extends 'layout.html' %}
+
+{% set contra = page.metadata.contra %}
+
+{% block title %}
+    {{ page.title + " - {% trans %}BibViz Project{% endtrans %}" }}
+{% endblock %}
+
+{% block content %}
+    <h2>{{ contra.desc }} <a class="btn btn-small" style="position: relative; top: -4px; font-size: 60%;" href="http://www.skepticsannotatedbible.com/contra/{{ contra.url }}"><i class="icon-external-link"></i> View original</a></h2>
+    <svg id="contradictions-chart" width="1200" height="500"></svg>
+    <div class="left article" style="width: 800px; margin-left: 160px">
+        <p>This contradiction is from the <a href="http://www.skepticsannotatedbible.com/">Skeptic's Annotated Bible</a>.</p>
+
+        <h3>Verses</h3>
+        {% for ref in contra.refs %}
+            <h4>{{ ref }} <a class="btn btn-small context" href="{{ env.getRefLink(ref) }}"><i class="icon-book"></i> <span class="label">View context</span></a></h4>
+            {% for verse in env.getVerses(ref) %}
+                <p>{{ verse }}</p>
+            {% endfor %}
+        {% endfor %}
+    </div>
+    <!--
+    <div class="left" style="margin-left: 20px; font-size: 7pt; text-align: center; width: 160px;">
+        <a href="http://www.zazzle.com/bible_contradictions_poster_14_x_24-228921555189929759"><img src="/blog/bible-contradictions-poster/bible-contradictions-poster.png" width="140"/></a>
+        <br/>
+        Buy the poster!
+    </div>
+    -->
+
+    <div class="books" style="width: 800px; margin-left: 160px; margin-bottom: 2em;">
+        {% import 'amazon.html' as amazon %}
+        {{ amazon.books(env.randomAdBooks()) }}
+    </div>
+
+    <div style="width: 800px; margin-left: 160px;">
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'bibviz'; // required: replace example with your forum shortname
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script>
+        var _contradictions = [
+            {
+                desc: '{{ contra.desc.replace("'", "\\'") }}',
+                refs: ["{{ contra.refs.join('", "') }}"],
+                url: '{{ contra.url }}'
+            }
+        ];
+
+        var maxArcs = 999;
+    </script>
+    <script src="/scripts/main.js"></script>
+{% endblock %}
