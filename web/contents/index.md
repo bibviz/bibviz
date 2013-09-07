@@ -80,6 +80,9 @@ scripts:
     {% import 'amazon.html' as amazon %}
     {{ amazon.books(['0988245108', '0988245116', '1416594795', '0618918248', '0446697966', '0307278778', '0143038338', '1569755671', '1569756775']) }}
 </div>
+<h3>{% trans %}Interesting Videos{% endtrans %}</h3>
+<iframe width="580" height="360" src="http://www.youtube.com/embed/PK7P7uZFf5o?feature=player_detailpage" frameborder="0" allowfullscreen style="margin-right: 30px;"></iframe>
+<iframe width="580" height="360" src="http://www.youtube.com/embed/RB3g6mXLEKk?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
 <h3>{% trans %}List of Contradictions Depicted Above (Click for more info){% endtrans %} <a id="contradictionList" href="#contradictionList"><i class="icon-link"></i></a></h3>
 <table id="contradictionsTable">
     <tr>
