@@ -5,6 +5,7 @@ var maxLength = 250;
 
 var contra = null;
 var contraFilters = {
+    source: window._contraSource ? window._contraSource : 'sab', /* Source of data, default SAB */
     book: null,         /* Specific book name */
     chapter: null,      /* Specific absolute chapter */
     type: null,         /* Specific contradiction type */
@@ -49,7 +50,7 @@ function getAbsoluteChapter(verse) {
 function renderContra() {
     var chart = d3.select('#contradictions-chart')
         .selectAll('.arc')
-        .data(contra.filter(function (d) {
+        .data(contra[contraFilters.source].contradictions.filter(function (d) {
             var i, found, match;
 
             // Filter out items that don't touch this chapter
@@ -117,7 +118,7 @@ function renderContra() {
     chart.enter().append('g')
         .attr('class', 'arc')
         .on('click', function (d) {
-            var url = '/' + slugg(d.desc) + '-sab.html';
+            var url = '/' + slugg(d.desc) + '-' + contraFilters.source + '.html';
             //var url = 'http://www.skepticsannotatedbible.com/contra/' + d.url;
 
             // Handle [cmd/ctrl]+click and middle click to open a new tab
@@ -394,6 +395,20 @@ d3.json('/data/kjv.json', function (err, json) {
     } else {
         d3.json('/data/contra.json', function (err, json) {
             contra = json;
+
+            var sourceSelect = d3.select('#source-select');
+
+            sourceSelect.selectAll('option')
+                .data(Object.keys(contra))
+                .enter().append('option')
+                    .attr('value', function (d) { return d; })
+                    .text(function (d) { return d; });
+
+            sourceSelect.on('change', function () {
+                contraFilters.source = this.value;
+
+                renderContra();
+            });
 
             renderContra();
         });

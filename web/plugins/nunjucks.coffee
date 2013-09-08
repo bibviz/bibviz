@@ -325,20 +325,22 @@ module.exports = (env, done) ->
         contradictions = env.getContra()
         #console.log contradictions
 
-        for contra in contradictions
-            meta =
-                title: contra.desc.trim().replace /"/g, '&quot;'
-                filename: slugg(contra.desc) + '-sab.html'
-                template: 'contradiction.html'
-                contra: contra
+        for own name, contraCategory of contradictions
+            for contra in contraCategory.contradictions
+                meta =
+                    title: contra.desc.trim().replace /"/g, '&quot;'
+                    filename: "#{slugg(contra.desc)}-#{name}.html"
+                    template: 'contradiction.html'
+                    category: contraCategory
+                    contra: contra
 
-            #console.log contra.desc
-            #console.log meta.filename
+                #console.log contra.desc
+                #console.log meta.filename
 
-            page = new MarkdownPage {full: '', relative: ''}, meta, ''
+                page = new MarkdownPage {full: '', relative: ''}, meta, ''
 
-            rv[meta.filename] = page
-            #break
+                rv[meta.filename] = page
+                #break
 
         done(null, rv)
 

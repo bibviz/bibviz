@@ -14,6 +14,12 @@ scripts:
 <h2><i class="icon-sitemap"></i> {% trans %}Contradictions{% endtrans %} <a id="contradictions" href="#contradictions"><i class="icon-link"></i></a></h2>
 <div class="filters">
     <div>
+        <label for="source-select">{% trans %}Source:{% endtrans %}</label>
+        <select id="source-select">
+            <option value="sab">sab</option>
+        </select>
+    </div>
+    <div>
         <label for="book-select">{% trans %}Book:{% endtrans %}</label>
         <select id="book-select">
             <option value="All">{% trans %}All{% endtrans %}</option>
@@ -87,17 +93,20 @@ scripts:
 <iframe width="580" height="360" src="http://www.youtube.com/embed/AcO4TnrskE0?feature=player_detailpage" frameborder="0" allowfullscreen style="margin-right: 30px;"></iframe>
 <iframe width="580" height="360" src="http://www.youtube.com/embed/xhhEeI3K7GU?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
 <h3>{% trans %}List of Contradictions Depicted Above (Click for more info){% endtrans %} <a id="contradictionList" href="#contradictionList"><i class="icon-link"></i></a></h3>
-<table id="contradictionsTable">
-    <tr>
-    {# Render these here for better SEO instead of dynamically at page load #}
-    {% for contra in env.getContra() -%}
-        {% if loop.index0 != 0 and loop.index0 % 4 == 0 -%}
-            </tr><tr>
-        {%- endif %}
-        <td><a href="/{{ env.slug(contra.desc) }}-sab.html">{{ loop.index }} {{ _(contra.desc.trim()) }}</a></td>
-    {%- endfor %}
-    </tr>
-</table>
+{% for name, category in env.getContra() -%}
+    <h4>{{ category.desc }}</h4>
+    <table class="contradictionsTable">
+        <tr>
+        {# Render these here for better SEO instead of dynamically at page load #}
+        {% for contra in category.contradictions -%}
+            {% if loop.index0 != 0 and loop.index0 % 4 == 0 -%}
+                </tr><tr>
+            {%- endif %}
+            <td><a href="/{{ env.slug(contra.desc) }}-{{ name }}.html">{{ loop.index }} {{ _(contra.desc.trim()) }}</a></td>
+        {%- endfor %}
+        </tr>
+    </table>
+{%- endfor %}
 <div class="footer">
     <div>
         <p>
