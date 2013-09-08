@@ -83,6 +83,9 @@ scripts:
 <h3>{% trans %}Interesting Videos{% endtrans %}</h3>
 <iframe width="580" height="360" src="http://www.youtube.com/embed/PK7P7uZFf5o?feature=player_detailpage" frameborder="0" allowfullscreen style="margin-right: 30px;"></iframe>
 <iframe width="580" height="360" src="http://www.youtube.com/embed/RB3g6mXLEKk?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
+<br/><br/>
+<iframe width="580" height="360" src="http://www.youtube.com/embed/AcO4TnrskE0?feature=player_detailpage" frameborder="0" allowfullscreen style="margin-right: 30px;"></iframe>
+<iframe width="580" height="360" src="http://www.youtube.com/embed/xhhEeI3K7GU?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
 <h3>{% trans %}List of Contradictions Depicted Above (Click for more info){% endtrans %} <a id="contradictionList" href="#contradictionList"><i class="icon-link"></i></a></h3>
 <table id="contradictionsTable">
     <tr>
