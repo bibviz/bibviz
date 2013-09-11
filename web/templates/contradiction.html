@@ -50,6 +50,9 @@
         <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
     </div>
+{% endblock %}
+
+{% block scripts %}
     <script src="http://d3js.org/d3.v3.min.js"></script>
     <script>
         var _contraSource = '{{ category.name }}';
@@ -71,4 +74,6 @@
         var maxArcs = 999;
     </script>
     <script src="/scripts/main.js?v=4"></script>
+
+    {% include 'addthis.html' %}
 {% endblock %}
