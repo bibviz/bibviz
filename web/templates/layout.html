@@ -87,7 +87,6 @@
                 <i class="icon-credit-card"></i> {% trans %}Donate{% endtrans %}
             </a>
         </div>
-        <div id="fb-root"></div>
         {% block scripts %}{% endblock %}
         {% for script in page.metadata.scripts or [] %}
             <script src="{{ script }}" charset="utf-8"></script>
@@ -100,22 +99,6 @@
 
             ga('create', 'UA-16567764-5', 'bibviz.com');
             ga('send', 'pageview');
-
-            (function() {
-                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-                po.src = 'https://apis.google.com/js/plusone.js';
-                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-            })();
-
-            (function(d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0];
-                if (d.getElementById(id)) return;
-                js = d.createElement(s); js.id = id;
-                js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=414221561958592";
-                fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));
-
-            !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
         </script>
     </body>
 </html>

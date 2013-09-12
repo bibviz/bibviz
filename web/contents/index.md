@@ -2,7 +2,7 @@
 title: BibViz Project - Bible Contradictions, Misogyny, Violence, Inaccuracies
 description: A beautiful and interactive resource to explore negative aspects of the Bible.
 image: /square.png
-template: layout.html
+template: index.html
 translated: true
 scripts:
 - http://d3js.org/d3.v3.min.js
@@ -43,13 +43,6 @@ scripts:
     </div>
 </div>
 <svg id="contradictions-chart" width="1200" height="500"></svg>
-<div id="social">
-    <div class="fb-like" data-href="http://www.bibviz.com/" data-width="300" data-layout="button_count" data-show-faces="true" data-send="false"></div>
-    <span class="spacer"></span>
-    <div class="g-plusone" data-size="medium"></div>
-    <span class="spacer"></span>
-    <a href="https://twitter.com/share" class="twitter-share-button" data-text="Bible Interactively Visualized: Contradictions, Misogyny, Violence, Inaccuracies http://bibviz.com/" data-via="dgt84" data-hashtags="bibviz,bible">{% trans %}Tweet{% endtrans %}</a>
-</div>
 <h2><i class="icon-beaker"></i> {% trans %}Scientific Absurdities &amp; Historical Inaccuracies{% endtrans %}<a id="science" href="#science"><i class="icon-link"></i></a></h2>
 <svg id="science-chart" width="1200" height="100"></svg>
 <blockquote class="science">{% trans %}And there appeared another wonder in heaven; and behold a great red dragon, having seven heads and ten horns, and seven crowns upon his heads.{% endtrans %}<br/><br/><div><a href="http://www.biblegateway.com/passage/?search=Revelation%2012:3&amp;version=KJV">{% trans %}Revelation 12:3{% endtrans %}</a></div></blockquote>
