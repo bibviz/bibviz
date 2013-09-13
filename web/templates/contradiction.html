@@ -10,16 +10,28 @@
 {% block content %}
     <h2>{{ contra.desc }} <a class="btn btn-small" style="position: relative; top: -4px; font-size: 60%;" href="{{ category.url }}{{ contra.url }}"><i class="icon-external-link"></i> View original</a></h2>
     <svg id="contradictions-chart" width="1200" height="500"></svg>
-    <div class="left article" style="width: 800px; margin-left: 160px">
+    <div class="left article contra-block" style="width: 800px; margin-left: 160px">
         <p>This Bible contradiction is from the <a href="{{ category.url }}{{ contra.url }}">{{ category.desc }}</a>.</p>
 
-        <h3>Verses</h3>
-        {% for ref in contra.refs %}
-            <h4>{{ ref }} <a class="btn btn-small context" href="{{ env.getRefLink(ref) }}"><i class="icon-book"></i> <span class="label">View context</span></a></h4>
-            {% for verse in env.getVerses(ref) %}
-                <p>{{ verse }}</p>
+        <h2>Verses</h2>
+        {% if env.hasRefGroups(contra.refs) %}
+            {% for name, refList in contra.refs %}
+                <h3>{{ name }}</h3>
+                {% for ref in refList %}
+                    <h4>{{ ref }} <a class="btn btn-small context" href="{{ env.getRefLink(ref) }}"><i class="icon-book"></i> <span class="label">View context</span></a></h4>
+                    {% for verse in env.getVerses(ref) %}
+                        <p>{{ verse }}</p>
+                    {% endfor %}
+                {% endfor %}
             {% endfor %}
-        {% endfor %}
+        {% else %}
+            {% for ref in contra.refs %}
+                <h4>{{ ref }} <a class="btn btn-small context" href="{{ env.getRefLink(ref) }}"><i class="icon-book"></i> <span class="label">View context</span></a></h4>
+                {% for verse in env.getVerses(ref) %}
+                    <p>{{ verse }}</p>
+                {% endfor %}
+            {% endfor %}
+        {% endif %}
     </div>
     <!--
     <div class="left" style="margin-left: 20px; font-size: 7pt; text-align: center; width: 160px;">
@@ -64,7 +76,7 @@
                 "contradictions": [
                     {
                         desc: '{{ contra.desc.replace("'", "\\'") }}',
-                        refs: ["{{ contra.refs.join('", "') }}"],
+                        refs: ["{{ env.flatRefs(contra.refs).join('", "') }}"],
                         url: '{{ contra.url }}'
                     }
                 ]

@@ -262,6 +262,20 @@ module.exports = (env, done) ->
                 bookMap[bookNames[i].toLowerCase()] = book
                 i++
 
+        env.hasRefGroups = (refs) ->
+            refs not instanceof Array
+
+        env.flatRefs = (refs) ->
+            if refs instanceof Array then return refs
+
+            refList = []
+
+            for name, list of refs
+                for item in list
+                    refList.push item
+
+            return refList
+
         env.getRefLink = (ref) ->
             parts = /^(\d?\s?[a-z]+)[\s.:]*(\d*):?(\d*)[-]?(\d*)/i.exec ref
             

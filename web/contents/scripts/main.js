@@ -47,18 +47,53 @@ function getAbsoluteChapter(verse) {
     return chapter + parseInt(parts[2]);
 }
 
+/*
+    Make sure we have a flat list of refs to filter or render.
+    This handles the following two cases and returns a flat,
+    plain list:
+
+    ['Ref 1', 'Ref 2', ...]
+
+    {
+        'Some desc': ['Ref 1', 'Ref 2'],
+        'Another': ['Ref 3', ...]
+    }
+*/
+function flatRefs(refs) {
+    var i, j, keys;
+
+    if (refs instanceof Array) {
+        refList = refs;
+    } else {
+        // This is an object with more info, so let's pull
+        // out all the refs.
+        refList = [];
+
+        keys = Object.keys(refs);
+        for (i = 0; i < keys.length; i++) {
+            for (j = 0; j < refs[keys[i]].length; j++) {
+                refList.push(refs[keys[i]][j]);
+            }
+        }
+    }
+
+    return refList;
+}
+
 function renderContra() {
     var chart = d3.select('#contradictions-chart')
         .selectAll('.arc')
         .data(contra[contraFilters.source].contradictions.filter(function (d) {
-            var i, found, match;
+            var i, found, match, refList;
+
+            refList = flatRefs(d.refs);
 
             // Filter out items that don't touch this chapter
             if (contraFilters.chapter !== null) {
                 found = false;
 
-                for (i = 0; i <= Math.min(d.refs.length - 1, 10); i++) {
-                    if (getAbsoluteChapter(d.refs[i]) == contraFilters.chapter) {
+                for (i = 0; i <= Math.min(refList.length - 1, 10); i++) {
+                    if (getAbsoluteChapter(refList[i]) == contraFilters.chapter) {
                         found = true;
                         break;
                     }
@@ -73,8 +108,8 @@ function renderContra() {
             if (contraFilters.book !== null) {
                 found = false;
 
-                for (i = 0; i < Math.min(d.refs.length - 1, 10); i++) {
-                    match = /(\d?\s*\w+)/.exec(d.refs[i]);
+                for (i = 0; i < Math.min(refList.length - 1, 10); i++) {
+                    match = /(\d?\s*\w+)/.exec(refList[i]);
 
                     if (match && (match[1] == contraFilters.book || match[1] + 's' == contraFilters.book)) {
                         found = true;
@@ -129,6 +164,8 @@ function renderContra() {
             }
         })
         .on('mouseover', function (d) {
+            var refList = flatRefs(d.refs);
+
             d3.select('#contradictions-chart')
                 .selectAll('.arc')
                 .sort(function (a, b) {
@@ -136,16 +173,17 @@ function renderContra() {
                 });
 
             d3.select('#selected')
-                .html(d.desc + '<br/><span class="subdued">' + d.refs.join(', ').substr(0, maxLength) + '</span>');
+                .html(d.desc + '<br/><span class="subdued">' + refList.join(', ').substr(0, maxLength) + '</span>');
         })
         .each(function (d, i) {
             var group = d3.select(this);
+            var refList = flatRefs(d.refs);
 
-            if (d.refs.length > 1) {
+            if (refList.length > 1) {
                 // Only show up to 10 refs, some have over 100...
-                for (x = 0; x <= Math.min(maxArcs, d.refs.length - 2); x++) {
-                    var start = getAbsoluteChapter(d.refs[x]);
-                    var end = getAbsoluteChapter(d.refs[x + 1]);
+                for (x = 0; x <= Math.min(maxArcs, refList.length - 2); x++) {
+                    var start = getAbsoluteChapter(refList[x]);
+                    var end = getAbsoluteChapter(refList[x + 1]);
 
                     if (start > end) {
                         var tmp = end;
