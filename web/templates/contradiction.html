@@ -4,14 +4,14 @@
 {% set category = page.metadata.category %}
 
 {% block title %}
-    {{ page.title + " - {% trans %}BibViz Project{% endtrans %}" }}
+    {{ page.title + " {% trans %}Bible Contradictions{% endtrans %} - {% trans %}BibViz Project{% endtrans %}" }}
 {% endblock %}
 
 {% block content %}
     <h2>{{ contra.desc }} <a class="btn btn-small" style="position: relative; top: -4px; font-size: 60%;" href="{{ category.url }}{{ contra.url }}"><i class="icon-external-link"></i> View original</a></h2>
     <svg id="contradictions-chart" width="1200" height="500"></svg>
     <div class="left article" style="width: 800px; margin-left: 160px">
-        <p>This contradiction is from the <a href="{{ category.url }}{{ contra.url }}">{{ category.desc }}</a>.</p>
+        <p>This Bible contradiction is from the <a href="{{ category.url }}{{ contra.url }}">{{ category.desc }}</a>.</p>
 
         <h3>Verses</h3>
         {% for ref in contra.refs %}

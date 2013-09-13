@@ -1,7 +1,7 @@
 ---
 title: BibViz Project - Bible Contradictions, Misogyny, Violence, Inaccuracies
 description: A beautiful and interactive resource to explore negative aspects of the Bible.
-image: /square.png
+image: /img/square.png
 template: index.html
 translated: true
 scripts:
@@ -11,7 +11,7 @@ scripts:
 
 <h1 style="margin-top: -40px;">{% trans %}The Holy Bible{% endtrans %}</h1>
 
-<h2><i class="icon-sitemap"></i> {% trans %}Contradictions{% endtrans %} <a id="contradictions" href="#contradictions"><i class="icon-link"></i></a></h2>
+<h2><i class="icon-sitemap"></i> {% trans %}Bible Contradictions{% endtrans %} <a id="contradictions" href="#contradictions"><i class="icon-link"></i></a></h2>
 <div class="filters">
     <div>
         <label for="source-select">{% trans %}Source:{% endtrans %}</label>
@@ -85,9 +85,9 @@ scripts:
 <br/><br/>
 <iframe width="580" height="360" src="http://www.youtube.com/embed/AcO4TnrskE0?feature=player_detailpage" frameborder="0" allowfullscreen style="margin-right: 30px;"></iframe>
 <iframe width="580" height="360" src="http://www.youtube.com/embed/xhhEeI3K7GU?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
-<h3>{% trans %}List of Contradictions Depicted Above (Click for more info){% endtrans %} <a id="contradictionList" href="#contradictionList"><i class="icon-link"></i></a></h3>
+<h3>{% trans %}List of Bible Contradictions Depicted Above (Click for more info){% endtrans %} <a id="contradictionList" href="#contradictionList"><i class="icon-link"></i></a></h3>
 {% for name, category in env.getContra() -%}
-    <h4>{{ category.desc }}</h4>
+    <h4>{{ category.desc }} Contradictions</h4>
     <table class="contradictionsTable">
         <tr>
         {# Render these here for better SEO instead of dynamically at page load #}

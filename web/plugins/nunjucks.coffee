@@ -333,6 +333,7 @@ module.exports = (env, done) ->
             for contra in contraCategory.contradictions
                 meta =
                     title: contra.desc.trim().replace /"/g, '&quot;'
+                    image: '/img/square.png'
                     filename: "#{slugg(contra.desc)}-#{name}.html"
                     template: 'contradiction.html'
                     category: contraCategory
