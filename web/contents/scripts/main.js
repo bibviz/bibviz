@@ -32,6 +32,108 @@ var contraTypeFilters = {
     'Other': null
 };
 
+// Get the URL hash as an object of key:value pairs
+function getParsedHash() {
+    var hash = {};
+
+    var parts = window.location.hash.substr(1).split(',');
+    for (var i = 0; i < parts.length; i++) {
+        var kv = parts[i].split(':');
+
+        if (kv && kv.length > 1) {
+            hash[kv[0]] = kv[1].replace('+', ' ');
+        }
+    }
+
+    return hash;
+}
+
+// Set the URL hash from an object of key:value pairs
+// Tries to replace history state rather than adding onto the stack
+function setHash(values) {
+    var hashArray = [];
+
+    var keys = Object.keys(values);
+    for (var i = 0; i < keys.length; i++) {
+        if (values[keys[i]] !== undefined && values[keys[i]] !== null) {
+            hashArray.push(keys[i] + ':' + values[keys[i]].replace(' ', '+'));
+        }
+    }
+
+    if (window.history && window.history.replaceState) {
+        var base = window.location.href.split('#')[0];
+
+        window.history.replaceState(null, null, base + '#' + hashArray.join(','));
+
+        setFiltersFromHash();
+        renderContra();
+    } else {
+        window.location.hash = hashArray.join(',');
+    }
+}
+
+// Update one or more key:value pairs in the URL hash
+// Set a value to null or undefined to remove it completely.
+function updateHash(values) {
+    var updated = getParsedHash();
+
+    var keys = Object.keys(values);
+    for (var i = 0; i < keys.length; i++) {
+        updated[keys[i]] = values[keys[i]];
+    }
+
+    setHash(updated);
+}
+
+
+// Set the selected <option> on a <select> element by
+// selector id and value
+function updateSelect(id, value) {
+    var selector = document.getElementById(id);
+
+    for (var i = 0; i < selector.options.length; i++) {
+        var option = selector.options[i];
+
+        if (option.value == value) {
+            selector.selectedIndex = i;
+            break;
+        }
+    }
+}
+
+function setFiltersFromHash() {
+    var _parsedHash = getParsedHash();
+
+    if (_parsedHash.source) {
+        contraFilters.source = _parsedHash.source;
+        updateSelect('source-select', contraFilters.source);
+    }
+
+    if (_parsedHash.book) {
+        contraFilters.book = _parsedHash.book;
+        updateSelect('book-select', contraFilters.book);
+    } else {
+        contraFilters.book = null;
+    }
+
+    if (_parsedHash.type) {
+        contraFilters.type = _parsedHash.type;
+        updateSelect('type-select', contraFilters.type);
+    } else {
+        contraFilters.type = null;
+    }
+
+    if (_parsedHash.colorize) {
+        contraFilters.colorize = _parsedHash.colorize;
+        updateSelect('color-select', contraFilters.colorize);
+    }
+}
+
+window.onhashchange = function () {
+    setFiltersFromHash();
+    renderContra();
+};
+
 // Returns true if a new tab should be opened from a click
 function newTab() {
     return (window.event && ((event.which == 1 && (event.ctrlKey === true || event.metaKey === true) || (event.which == 2))));
@@ -443,18 +545,18 @@ d3.json('/data/kjv.json', function (err, json) {
                     .text(function (d) { return d; });
 
             sourceSelect.on('change', function () {
-                contraFilters.source = this.value;
-
-                renderContra();
+                updateHash({source: this.value});
             });
+
+            // Initial call to setup the filters from the URL
+            setFiltersFromHash();
 
             renderContra();
         });
     }
 
     bookSelect.on('change', function() {
-        contraFilters.book = this.value != 'All' ? this.value : null;
-        renderContra();
+        updateHash({book: this.value != 'All' ? this.value : null});
     });
 
     var typeSelect = d3.select('#type-select');
@@ -463,20 +565,16 @@ d3.json('/data/kjv.json', function (err, json) {
         .text(function (d) {return d; });
 
     typeSelect.on('change', function () {
-        contraFilters.type = this.value;
-
-        renderContra();
+        updateHash({type: this.value != 'All' ? this.value : null});
     });
 
     d3.select('#color-select')
         .on('change', function () {
-            // Set the filter
-            contraFilters.colorize = this.value;
-
             // Clear all current arcs so they get recreated
             d3.select('#contradictions-chart').selectAll('.arc').remove();
 
-            renderContra();
+            // Set the filter
+            updateHash({colorize: this.value});
         });
 });
 
