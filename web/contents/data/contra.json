@@ -5028,13 +5028,19 @@
       },
       {
         "desc":" Who created heaven and earth?",
-        "refs":[
-          "Genesis 1:1",
-          "Isaiah 44:24",
-          "John 1:6-10",
-          "Colossians 1:16",
-          "1 Corinthians 8:6"
-        ],
+        "refs": {
+          "God the Father did it all by himself": [
+            "Genesis 1:1",
+            "Isaiah 44:24"
+          ],
+          "Jesus did it": [
+            "John 1:6-10",
+            "Colossians 1:16"
+          ],
+          "God and Jesus did it together": [
+            "1 Corinthians 8:6"
+          ]
+        },
         "url":"who_created.html"
       },
       {
