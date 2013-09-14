@@ -5705,5 +5705,1856 @@
         ]
       }
     ]
+  },
+  "evil-bible": {
+    "name": "evil-bible",
+    "desc": "EvilBible.com",
+    "url": "http://www.evilbible.com/Biblical%20Contradictions.htm",
+    "contradictions": [
+      {
+        "desc": "Is God satisfied with his works?",
+        "refs": {
+          "He is satisfied": [
+            "Genesis 1:31"
+          ],
+          "He is dissatisfied": [
+            "Genesis 6:6"
+          ]
+        }
+      },
+      {
+        "desc": "Does God dwell in temples?",
+        "refs": {
+          "God dwells in chosen temples": [
+            "2 Chronicles 7:12",
+            "2 Chronicles 7:16"
+          ],
+          "God does not dwell in temples": [
+            "Acts 7:48"
+          ]
+        }
+      },
+      {
+        "desc": "Does God dwell in light or darkness?",
+        "refs": {
+          "God dwells in light": [
+            "1 Timothy 6:16"
+          ],
+          "God dwells in darkness": [
+            "1 Kings 8:12",
+            "Psalms 18:11",
+            "Psalms 97:2"
+          ]
+        }
+      },
+      {
+        "desc": "Can God be seen or heard?",
+        "refs": {
+          "God is seen and heard": [
+            "Exodus 33:23",
+            "Exodus 33:11",
+            "Genesis 3:9",
+            "Genesis 3:10",
+            "Isaiah 6:1",
+            "Exodus 24:9-11"
+          ],
+          "God is invisible and cannot be heard": [
+            "John 1:18",
+            "John 5:37",
+            "Exodus 33:20",
+            "1 Timothy 6:16"
+          ]
+        }
+      },
+      {
+        "desc": "Does God get tired?",
+        "refs": {
+          "God gets tired and rests": [
+            "Exodus 31:17"
+          ],
+          "God is never tired and never rests": [
+            "Isaiah 40:28"
+          ]
+        }
+      },
+      {
+        "desc": "Does God see and know all things?",
+        "refs": {
+          "God is everywhere present, sees and knows all things": [
+            "Proverbs 15:3",
+            "Psalms 139:7-10",
+            "Job 34:21-22"
+          ],
+          "God is not everywhere present, neither sees nor knows all things": [
+            "Genesis 11:5",
+            "Genesis 18:20-21",
+            "Genesis 3:8"
+          ]
+        }
+      },
+      {
+        "desc": "Does God know the hearts of men?",
+        "refs": {
+          "God knows the hearts of men": [
+            "Acts 1:24",
+            "Psalms 139:2-3"
+          ],
+          "God tries men to find out what is in their hearts": [
+            "Deuteronomy 13:3",
+            "Deuteronomy 8:2",
+            "Genesis 22:12"
+          ]
+        }
+      },
+      {
+        "desc": "Is God all powerful?",
+        "refs": {
+          "God is all powerful": [
+            "Jeremiah 32:27",
+            "Matthew 19:26"
+          ],
+          "God is not all powerful": [
+            "Judges 1:19"
+          ]
+        }
+      },
+      {
+        "desc": "Can God be changed?",
+        "refs": {
+          "God is unchangeable": [
+            "James 1:17",
+            "Malachi 3:6",
+            "Ezekiel 24:14",
+            "Numbers 23:19"
+          ],
+          "God is changeable": [
+            "Genesis 6:6",
+            "Jonah 3:10",
+            "1 Samuel 2:30-31",
+            "2 Kings 20:1",
+            "2 Kings 20:4-6",
+            "Exodus 33:1",
+            "Exodus 33:3",
+            "Exodus 33:17",
+            "Exodus 33:14"
+          ]
+        }
+      },
+      {
+        "desc": "Is God just and impartial?",
+        "refs": {
+          "God is just and impartial": [
+            "Psalms 92:15",
+            "Genesis 18:25",
+            "Deuteronomy 32:4",
+            "Romans 2:11",
+            "Ezekiel 18:25"
+          ],
+          "God is injust and partial": [
+            "Genesis 9:25",
+            "Exodus 20:5",
+            "Romans 9:11-13",
+            "Matthew 13:12"
+          ]
+        }
+      },
+      {
+        "desc": "Is God the author of evil?",
+        "refs": {
+          "God is the author of evil": [
+            "Lamentations 3:38",
+            "Jeremiah 18:11",
+            "Isaiah 45:7",
+            "Amos 3:6",
+            "Ezekiel 20:25"
+          ],
+          "God is not the author of evil": [
+            "1 Corinthians 14:33",
+            "Deuteronomy 32:4",
+            "James 1:13"
+          ]
+        }
+      },
+      {
+        "desc": "Does God give freely or withold his blessings?",
+        "refs": {
+          "God gives freely to those who ask": [
+            "James 1:5",
+            "Luke 11:10"
+          ],
+          "God withholds his blessings and prevents men from receiving them": [
+            "John 12:40",
+            "Joshua 11:20",
+            "Isaiah 63:17"
+          ]
+        }
+      },
+      {
+        "desc": "Is God to be found by those who seek him?",
+        "refs": {
+          "God is to be found by those who seek him": [
+            "Matthew 7:8",
+            "Proverbs 8:17"
+          ],
+          "God is not to be found by those who seek him": [
+            "Proverbs 1:28"
+          ]
+        }
+      },
+      {
+        "desc": "Is God warlike or peaceful?",
+        "refs": {
+          "God is warlike": [
+            "Exodus 15:3",
+            "Isaiah 51:15"
+          ],
+          "God is peaceful": [
+            "Romans 15:33",
+            "1 Corinthians 14:33"
+          ]
+        }
+      },
+      {
+        "desc": "Is God cruel and destructive or kind and merciful?",
+        "refs": {
+          "God is cruel, unmerciful, destructive, and ferocious": [
+            "Jeremiah 13:14",
+            "Deuteronomy 7:16",
+            "1 Samuel 15:2-3",
+            "1 Samuel 6:19"
+          ],
+          "God is kind, merciful, and good": [
+            "James 5:11",
+            "Lamentations 3:33",
+            "1 Chronicles 16:34",
+            "Ezekiel 18:32",
+            "Psalms 145:9",
+            "1 Timothy 2:4",
+            "1 John 4:16",
+            "Psalms 25:8"
+          ]
+        }
+      },
+      {
+        "desc": "How long and fierce is God's anger?",
+        "refs": {
+          "God's anger is fierce and endures long": [
+            "Numbers 32:13",
+            "Numbers25:4",
+            "Jeremiah 17:4"
+          ],
+          "God's anger is slow and endures but for a minute": [
+            "Psalms 103:8",
+            "Psalms 30:5"
+          ]
+        }
+      },
+      {
+        "desc": "Does God want burnt offerings and sacrifices?",
+        "refs": {
+          "God commands, approves of, and delights in burnt offerings, sacrifices ,and holy days": [
+            "Exodus 29:36",
+            "Leviticus 23:27",
+            "Exodus 29:18",
+            "Leviticus 1:9"
+          ],
+          "God disapproves of and has no pleasure in burnt offerings, sacrifices, and holy days": [
+            "Jeremiah 7:22",
+            "Jeremiah 6:20",
+            "Psalms 50:4",
+            "Psalms 50:13",
+            "Isaiah 1:11-13"
+          ]
+        }
+      },
+      {
+        "desc": "Does God accept or forbid human sacrifices?",
+        "refs": {
+          "God accepts human sacrifices": [
+            "2 Samuel 21:8-9",
+            "2 Samuel 21:14",
+            "Genesis 22:2",
+            "Judges 11:30-39"
+          ],
+          "God forbids human sacrifices": [
+            "Deuteronomy 12:30-31"
+          ]
+        }
+      },
+      {
+        "desc": "Does God tempt people?",
+        "refs": {
+          "God tempts people": [
+            "Genesis 22:1",
+            "2 Samuel 24:1",
+            "Jeremiah 20:7",
+            "Matthew 6:13"
+          ],
+          "God tempts nobody": [
+            "James 1:13"
+          ]
+        }
+      },
+      {
+        "desc": "Does God ever lie?",
+        "refs": {
+          "God cannot tell a lie": [
+            "Hebrews 6:18"
+          ],
+          "God lies by proxy; he sends forth lying spirits to deceive": [
+            "2 Thessalonians 2:11",
+            "1 Kings 22:23",
+            "Ezekiel 14:9"
+          ]
+        }
+      },
+      {
+        "desc": "Does God destroy man for his wickedness?",
+        "refs": {
+          "Because of man's wickedness God destroys him": [
+            "Genesis 6:5",
+            "Genesis 6:7"
+          ],
+          "Because of man's wickedness God will not destroy him": [
+            "Genesis 8:21"
+          ]
+        }
+      },
+      {
+        "desc": "Can God's attributes be known?",
+        "refs": {
+          "God's attributes are revealed in his works'": [
+            "Romans 1:20"
+          ],
+          "God's attributes cannot be discovered": [
+            "Job 11:7",
+            "Isaiah 40:28"
+          ]
+        }
+      },
+      {
+        "desc": "How many gods are there?",
+        "refs": {
+          "There is but one God": [
+            "Deuteronomy 6:4"
+          ],
+          "There is a plurality of gods": [
+            "Genesis 1:26",
+            "Genesis 3:22",
+            "Genesis 18:1-3",
+            "1 John 5:7"
+          ]
+        }
+      },
+      {
+        "desc": "Is it okay to rob people?",
+        "refs": {
+          "Robbery commanded": [
+            "Exodus 3:21-22",
+            "Exodus 12:35-36"
+          ],
+          "Robbery forbidden": [
+            "Leviticus 19:13",
+            "Exodus 20:15"
+          ]
+        }
+      },
+      {
+        "desc": "Is it okay to lie?",
+        "refs": {
+          "Lying is approved and sanctioned": [
+            "Joshua 2:4-6",
+            "James 2:25",
+            "Exodus 1:18-20",
+            "1 Kings 22:21-22"
+          ],
+          "Lying is forbidden": [
+            "Exodus 20:16",
+            "Proverbs 12:22",
+            "Revelation 21:8"
+          ]
+        }
+      },
+      {
+        "desc": "Is it okay to hate the Edomites?",
+        "refs": {
+          "Hatred to the Edomite sanctioned": [
+            "2 Kings 14:3",
+            "2 Kings 14:7"
+          ],
+          "Hatred to the Edomite forbidden": [
+            "Deuteronomy 23:7"
+          ]
+        }
+      },
+      {
+        "desc": "Is it okay to kill?",
+        "refs": {
+          "Killing commanded": [
+            "Exodus 32:27"
+          ],
+          "Killing forbidden": [
+            "Exodus 20:13"
+          ]
+        }
+      },
+      {
+        "desc": "Should the blood-shedder be put to death?",
+        "refs": {
+          "The blood-shedder must die": [
+            "Genesis 9:5-6"
+          ],
+          "The blood-shedder must not die": [
+            "Genesis 4:15"
+          ]
+        }
+      },
+      {
+        "desc": "Is it okay to make images?",
+        "refs": {
+          "The making of images is forbidden": [
+            "Exodus 20:4"
+          ],
+          "The making of images is commanded": [
+            "Exodus 25:18",
+            "Exodus 25:20"
+          ]
+        }
+      },
+      {
+        "desc": "Is slavery and oppression okay?",
+        "refs": {
+          "Slavery and oppression ordained": [
+            "Genesis 9:25",
+            "Leviticus 25:45-46",
+            "Joel 3:8"
+          ],
+          "Slavery and oppression forbidden": [
+            "Isaiah 58:6",
+            "Exodus 22:21",
+            "Exodus 21:16",
+            "Matthew 23:10"
+          ]
+        }
+      },
+      {
+        "desc": "Is improvidence okay?",
+        "refs": {
+          "Improvidence is enjoyed": [
+            "Matthew 6:28",
+            "Matthew 6:31",
+            "Matthew 6:34",
+            "Luke 6:30",
+            "Luke 6:35",
+            "Luke 12:3"
+          ],
+          "Improvidence is condemned": [
+            "1 Timothy 5:8",
+            "Proverbs 13:22"
+          ]
+        }
+      },
+      {
+        "desc": "Is it okay to get angry?",
+        "refs": {
+          "Anger is approved": [
+            "Ephesians 4:26"
+          ],
+          "Anger is disapproved": [
+            "Ecclesiastes 7:9",
+            "Proverbs 22:24",
+            "James 1:20"
+          ]
+        }
+      },
+      {
+        "desc": "Are good works to be seen of men?",
+        "refs": {
+          "Good works to be seen of men": [
+            "Matthew 5:16"
+          ],
+          "Good works not to be seen of men": [
+            "Matthew 6:1"
+          ]
+        }
+      },
+      {
+        "desc": "Is it okay to judge others?",
+        "refs": {
+          "Judging of others if forbidden": [
+            "Matthew 7:1-2"
+          ],
+          "Judging of others is approved": [
+            "1 Corinthians 6:2-4",
+            "1 Corinthians 5:12"
+          ]
+        }
+      },
+      {
+        "desc": "Did Jesus teach physical resistence?",
+        "refs": {
+          "Christ taught non-resistance": [
+            "Matthew 5:39",
+            "Matthew 26:52"
+          ],
+          "Christ taught and practiced physical resistence": [
+            "Luke 22:36",
+            "John 2:15"
+          ]
+        }
+      },
+      {
+        "desc": "Should you fear death?",
+        "refs": {
+          "Christ warned his followers not to fear being killed": [
+            "Luke 12:4"
+          ],
+          "Christ himself avoided the Jews for fear of being killed": [
+            "John 7:1"
+          ]
+        }
+      },
+      {
+        "desc": "Is it okay to pray in public?",
+        "refs": {
+          "Public prayer sanctioned": [
+            "1 Kings 8:22",
+            "1 Kings 8:54",
+            "1 Kings 9:3"
+          ],
+          "Public prayer disapproved": [
+            "Matthew 6:5-6"
+          ]
+        }
+      },
+      {
+        "desc": "Is it okay to ask for things while praying?",
+        "refs": {
+          "Importunity in prayer commanded": [
+            "Luke 8:5",
+            "Luke 8:7"
+          ],
+          "Importunity in prayer condemned": [
+            "Matthew 6:7-8"
+          ]
+        }
+      },
+      {
+        "desc": "Is it okay to have long hair?",
+        "refs": {
+          "The wearing of long hair by men sanctioned": [
+            "Judges 13:5",
+            "Numbers 6:5"
+          ],
+          "The wearing of long hair by men condemned": [
+            "1 Corinthians 11:14"
+          ]
+        }
+      },
+      {
+        "desc": "Should you get circumcized?",
+        "refs": {
+          "Circumcision instituted": [
+            "Genesis 17:10"
+          ],
+          "Circumcision condemned": [
+            "Galatians 5:2"
+          ]
+        }
+      },
+      {
+        "desc": "Should you follow the Sabbath?",
+        "refs": {
+          "The Sabbath instituted": [
+            "Exodus 20:8"
+          ],
+          "The Sabbath repudiated": [
+            "Isaiah 1:13",
+            "Romans 14:5",
+            "Colossians 2:16"
+          ]
+        }
+      },
+      {
+        "desc": "Why was the Sabbath instituted?",
+        "refs": {
+          "The Sabbath instituted because God rested on the seventh day": [
+            "Exodus 20:11"
+          ],
+          "The Sabbath instituted because God brought the Israelites out of Ebypt": [
+            "Deuteronomy 5:15"
+          ]
+        }
+      },
+      {
+        "desc": "Should you do work on the Sabbath?",
+        "refs": {
+          "No work to be done on the Sabbath under penalty of death": [
+            "Exodus 31:15",
+            "Numbers 15:32",
+            "Numbers 15:36"
+          ],
+          "Jesus Christ broke the Sabbath and justified his disciples to do the same": [
+            "John 5:16",
+            "Matthew 12:1-3",
+            "Matthew 12:5"
+          ]
+        }
+      },
+      {
+        "desc": "Should you be baptized?",
+        "refs": {
+          "Baptism commanded": [
+            "Matthew 28:19"
+          ],
+          "Baptism not commanded": [
+            "1 Corinthians 1:14",
+            "1 Corinthians 1:17"
+          ]
+        }
+      },
+      {
+        "desc": "What kind of animals can you eat?",
+        "refs": {
+          "Every kind of animal is allowed for food": [
+            "Genesis 9:3",
+            "1 Corinthians 10:25",
+            "Romans 14:14"
+          ],
+          "Certain kinds of animals are prohibited for food": [
+            "Deuteronomy 14:7-8"
+          ]
+        }
+      },
+      {
+        "desc": "Is it okay to take an oath?",
+        "refs": {
+          "Taking of oaths sanctioned": [
+            "Numbers 30:2",
+            "Genesis 21:23-24",
+            "Genesis 21:31",
+            "Genesis 31:53",
+            "Hebrews 6:13"
+          ],
+          "Taking of oaths forbidden": [
+            "Matthew 5:34"
+          ]
+        }
+      },
+      {
+        "desc": "Is it okay to get married?",
+        "refs": {
+          "Marriage approved": [
+            "Genesis 2:18",
+            "Genesis 1:28",
+            "Matthew 19:5",
+            "Hebrews 13:4"
+          ],
+          "Marriage disapproved": [
+            "1 Corinthians 7:1",
+            "1 Corinthians 7:7-8"
+          ]
+        }
+      },
+      {
+        "desc": "Can you get divorced?",
+        "refs": {
+          "Freedom of divorce permitted": [
+            "Deuteronomy 24:1",
+            "Deuteronomy 21:10-11",
+            "Deuteronomy 21:14"
+          ],
+          "Divorce is forbidden": [
+            "Matthew 5:32"
+          ]
+        }
+      },
+      {
+        "desc": "Is adultery okay?",
+        "refs": {
+          "Adultery forbidden": [
+            "Exodus 20:14",
+            "Hebrews 13:4"
+          ],
+          "Adultery allowed": [
+            "Numbers 31:18",
+            "Hosea 1:2",
+            "Hosea 2:1-3"
+          ]
+        }
+      },
+      {
+        "desc": "Is it okay to you marry your sister?",
+        "refs": {
+          "Marriage or cohabitation with a sister denounced": [
+            "Deuteronomy 27:22",
+            "Leviticus 20:17"
+          ],
+          "Abraham married his sister and God blessed the union": [
+            "Genesis 20:11-12",
+            "Genesis 17:!6"
+          ]
+        }
+      },
+      {
+        "desc": "Is it okay to marry your brother's widow?",
+        "refs": {
+          "A man may marry his brother's widow": [
+            "Deuteronomy 25:5"
+          ],
+          "A man may not marry his brother's widow": [
+            "Leviticus 20:21"
+          ]
+        }
+      },
+      {
+        "desc": "Is it okay to hate your relatives?",
+        "refs": {
+          "Hatred to kindred enjoined": [
+            "Luke 14:26"
+          ],
+          "Hatred to kindred condemned": [
+            "Ephesians 6:2",
+            "Ephesians 5:25",
+            "Ephesians 5:29"
+          ]
+        }
+      },
+      {
+        "desc": "Is it okay to drink alcohol or get drunk?",
+        "refs": {
+          "Intoxicating beverages recommended": [
+            "Proverbs 31:6-7",
+            "1 Timothy 5:23",
+            "Psalms 104:15"
+          ],
+          "Intoxicating beverages discountenanced": [
+            "Proverbs 20:1",
+            "Proverbs 23:31-32"
+          ]
+        }
+      },
+      {
+        "desc": "Should you obey your rulers?",
+        "refs": {
+          "It is our duty to obey our rulers, who are God's ministers and punish evil doers only": [
+            "Romans 13:1-3",
+            "Romans 13:6"
+          ],
+          "It is not our duty to obey rulers, who sometimes punish the good and receive unto themselves damnation therefor": [
+            "Exodus 1:17",
+            "Exodus 1:20",
+            "Daniel 3:16",
+            "Daniel 3:18",
+            "Daniel 6:7",
+            "Daniel 6:9-10",
+            "Acts 4:26-27",
+            "Mark 12:38-40",
+            "Luke 23:11",
+            "Luke 23:24",
+            "Luke 23:33",
+            "Luke 23:35"
+          ]
+        }
+      },
+      {
+        "desc": "Do women have rights?",
+        "refs": {
+          "Women's rights denied": [
+            "Genesis 3:16",
+            "1 Timothy 2:12",
+            "1 Corinthians 14:34",
+            "1 Peter 3:6"
+          ],
+          "Women's rights affirmed": [
+            "Judges 4:4",
+            "Judges 4:14-15",
+            "Judges 5:7",
+            "Acts 2:18",
+            "Acts 21:9"
+          ]
+        }
+      },
+      {
+        "desc": "Should you obey both God and your masters?",
+        "refs": {
+          "Obediance to masters enjoined": [
+            "Colossians 3:22-23",
+            "1 Peter 2:18"
+          ],
+          "Obediance due to God only": [
+            "Matthew 4:10",
+            "1 Corinthians 7:23",
+            "Matthew 23:10"
+          ]
+        }
+      },
+      {
+        "desc": "Does an unpardonable sin exist?",
+        "refs": {
+          "There is an unpardonable sin": [
+            "Mark 3:29"
+          ],
+          "There is not unpardonable sin": [
+            "Acts 13:39"
+          ]
+        }
+      },
+      {
+        "desc": "Was man created before or after the animals?",
+        "refs": {
+          "Man was created after the other animals": [
+            "Genesis 1:25-27"
+          ],
+          "Man was created before the other animals": [
+            "Genesis 2:18-19"
+          ]
+        }
+      },
+      {
+        "desc": "Do seed time and harvest ever cease?",
+        "refs": {
+          "Seed time and harvest were never to cease": [
+            "Genesis 8:22"
+          ],
+          "Seed time and harvest did cease for seven years": [
+            "Genesis 41:54",
+            "Genesis 41:56",
+            "Genesis 45:11"
+          ]
+        }
+      },
+      {
+        "desc": "Who hardened the Pharaoh's heart?",
+        "refs": {
+          "God hardened the Pharaoh's heart": [
+            "Exodus 4:21",
+            "Exodus 9:12"
+          ],
+          "The Pharaoh harded his own heart": [
+            "Exodus 8:15"
+          ]
+        }
+      },
+      {
+        "desc": "Did all the cattle/horses of Egypt die?",
+        "refs": {
+          "All the cattle and horses in Egypt died": [
+            "Exodus 9:3",
+            "Exodus 9:6"
+          ],
+          "All the horses of Egypt did not die": [
+            "Exodus 14:9"
+          ]
+        }
+      },
+      {
+        "desc": "Did moses fear Pharaoh?",
+        "refs": {
+          "Moses feared Pharaoh": [
+            "Exodus 2:14-15",
+            "Exodus 2: 23",
+            "Exodus 4:19"
+          ],
+          "Moses did not fear Pharaoh": [
+            "Hebrews 11:27"
+          ]
+        }
+      },
+      {
+        "desc": "How many died of the plague?",
+        "refs": {
+          "There died of the plague 24,000": [
+            "Numbers 25:9"
+          ],
+          "There died of the plague but 23,000": [
+            "1 Corinthians 10:8"
+          ]
+        }
+      },
+      {
+        "desc": "Was John the Baptist Elias?",
+        "refs": {
+          "John the Baptist was Elias": [
+            "Matthew 11:14"
+          ],
+          "John the Baptist was not Elias": [
+            "John 1:21"
+          ]
+        }
+      },
+      {
+        "desc": "Who was the father of Mary's husband?",
+        "refs": {
+          "The father of Joseph, Mary's husband was Jacob": [
+            "Matthew 1:16"
+          ],
+          "The father of Mary's husband was Heli": [
+            "Luke 3:23"
+          ]
+        }
+      },
+      {
+        "desc": "Who was the father of Salah?",
+        "refs": {
+          "The father of Salah was Arphaxad": [
+            "Genesis 11:12"
+          ],
+          "The father of Salah was Cainan": [
+            "Luke 3:35-36"
+          ]
+        }
+      },
+      {
+        "desc": "How many generation from Abraham to David?",
+        "refs": {
+          "There were 14 generations from Abraham to David": [
+            "Matthew 1:17"
+          ],
+          "There were but 13 generations from Abraham to David": [
+            "Matthew 1:2-6"
+          ]
+        }
+      },
+      {
+        "desc": "How many generations from the Babylonian captivity to Jesus?",
+        "refs": {
+          "There were 14 generations": [
+            "Matthew 1:17"
+          ],
+          "There were but 13 generations": [
+            "Matthew 1:12-16"
+          ]
+        }
+      },
+      {
+        "desc": "Was the infant Jesus taken into Egypt??",
+        "refs": {
+          "The infant Christ was taken into Egypt": [
+            "Matthew 2:14-15",
+            "Matthew 2:19",
+            "Matthew 2:21",
+            "Matthew 2:23"
+          ],
+          "The infant Christ was not taken into Egypt": [
+            "Luke 2:22",
+            "Luke 2:39"
+          ]
+        }
+      },
+      {
+        "desc": "Was Jesus tempted in the wilderness?",
+        "refs": {
+          "Christ was tempted in the wilderness": [
+            "Mark 1:12-13"
+          ],
+          "Christ was not tempted in the wilderness": [
+            "John 2:1-2"
+          ]
+        }
+      },
+      {
+        "desc": "Where did Jesus preach his first sermon?",
+        "refs": {
+          "Christ preached his first sermon on the mount": [
+            "Matthew 5:1-2"
+          ],
+          "Christ preached his first sermon on the plain": [
+            "Luke 6:17",
+            "Luke 6:20"
+          ]
+        }
+      },
+      {
+        "desc": "Was John imprisoned when Jesus went into Galilee?",
+        "refs": {
+          "John was in prison": [
+            "Mark 1:14"
+          ],
+          "John was not in prison": [
+            "John 1:43",
+            "John 3:22-24"
+          ]
+        }
+      },
+      {
+        "desc": "Were Jesus' disciples told to go forth with staff and sandals?",
+        "refs": {
+          "Christ's disciples were commanded to go forth with a staff and sandals": [
+            "Mark 6:8-9"
+          ],
+          "Christ's disciples were commanded to go forth with neither staffs nor sandals": [
+            "Matthew 10:9-10"
+          ]
+        }
+      },
+      {
+        "desc": "Which woman besought Jesus?",
+        "refs": {
+          "A woman of Canaan": [
+            "Matthew 15:22"
+          ],
+          "A Greek woman": [
+            "Mark 7:26"
+          ]
+        }
+      },
+      {
+        "desc": "How many blind men besought Jesus?",
+        "refs": {
+          "Two blind men": [
+            "Matthew 20:30"
+          ],
+          "Only one blind man": [
+            "Luke 18:35",
+            "Luke 18:38"
+          ]
+        }
+      },
+      {
+        "desc": "When was Jesus crucified?",
+        "refs": {
+          "Christ was crucified at the third hour": [
+            "Mark 15:25"
+          ],
+          "Christ was crucified until the sixth hour": [
+            "John 19:14-15"
+          ]
+        }
+      },
+      {
+        "desc": "How many thieves reviled Jesus?",
+        "refs": {
+          "Two thieves reviled Christ": [
+            "Matthew 27:44",
+            "Mark 15:32"
+          ],
+          "Only one thief reviled Christ": [
+            "Luke 23:39-40"
+          ]
+        }
+      },
+      {
+        "desc": "When did Satan enter into Judas?",
+        "refs": {
+          "Satan entered into Judas while at supper": [
+            "John 13:27"
+          ],
+          "Satan entered into Judas before the supper": [
+            "Luke 22:3-4",
+            "Luke 22:7"
+          ]
+        }
+      },
+      {
+        "desc": "How did Judas die?",
+        "refs": {
+          "Judas committed suicide by hanging": [
+            "Matthew 27:5"
+          ],
+          "Judas did not hang himself, but died another way": [
+            "Acts 1:18"
+          ]
+        }
+      },
+      {
+        "desc": "Who purchased the potter's field?",
+        "refs": {
+          "Judas": [
+            "Acts 1:18"
+          ],
+          "The chief priests": [
+            "Matthew 27:6-7"
+          ]
+        }
+      },
+      {
+        "desc": "How many women came to the sepulchre?",
+        "refs": {
+          "One woman came to the sepulchre": [
+            "John 20:1"
+          ],
+          "Two women came to the sepulchre": [
+            "Matthew 28:1"
+          ],
+          "Three women came to the sepulchre": [
+            "Mark 16:1"
+          ],
+          "More than three women came to the sepulchre": [
+            "Luke 24:10"
+          ]
+        }
+      },
+      {
+        "desc": "When did they come to the sepulchre?",
+        "refs": {
+          "At sunrise": [
+            "Mark 16:2"
+          ],
+          "Some time before sunrise": [
+            "John 20:1"
+          ]
+        }
+      },
+      {
+        "desc": "How many angels were at the sepulchre?",
+        "refs": {
+          "Two angels seen by the women, and they were standing": [
+            "Luke 24:4",
+            "John 20:11-12"
+          ],
+          "Only one angel, and he was sitting": [
+            "Matthew 28:2",
+            "Matthew 28:5",
+            "Mark 16:5"
+          ]
+        }
+      },
+      {
+        "desc": "How many nights was Jesus in the grave?",
+        "refs": {
+          "Christ was to be three days and three nights in the grave": [
+            "Matthew 12:40"
+          ],
+          "Christ was to be but two days and two nights in the grave": [
+            "Mark 15:25",
+            "Mark 15:42",
+            "Mark 15:44-46",
+            "Mark 16:9"
+          ]
+        }
+      },
+      {
+        "desc": "When was the holy ghost bestowed?",
+        "refs": {
+          "Holy ghost bestowed at pentecost": [
+            "Acts 1:5",
+            "Acts 1:8"
+          ],
+          "Holy ghost bestowed before pentecost": [
+            "John 20:22"
+          ]
+        }
+      },
+      {
+        "desc": "Where were the disciples commanded to go immediately after the ressurection?",
+        "refs": {
+          "Go to Galilee": [
+            "Matthew 28:10"
+          ],
+          "Go to tarry at Jerusalem": [
+            "Luke 24:49"
+          ]
+        }
+      },
+      {
+        "desc": "Where did Jesus first appear to the eleven disciples?",
+        "refs": {
+          "A room in Jerusalem": [
+            "Luke 24:33",
+            "Luke 24:36-37",
+            "John 20:19"
+          ],
+          "On a mountain at Galilee": [
+            "Matthew 28:16-17"
+          ]
+        }
+      },
+      {
+        "desc": "Where did Jesus ascend?",
+        "refs": {
+          "Christ ascended from Mount Olivet": [
+            "Acts 1:9",
+            "Acts 1:12"
+          ],
+          "Christ ascended from Bethany": [
+            "Luke 24:50-51"
+          ]
+        }
+      },
+      {
+        "desc": "Did Paul's attendants hear a miraculous voice?",
+        "refs": {
+          "They heard a miraculous voice and stood speechless": [
+            "Acts 9:7"
+          ],
+          "They heard no voice and were prostrate": [
+            "Acts 26:14"
+          ]
+        }
+      },
+      {
+        "desc": "Where did Abraham depart to?",
+        "refs": {
+          "Abraham departed to go into Canaan": [
+            "Genesis 12:5"
+          ],
+          "Abraham went not knowing where": [
+            "Hebrews 11:8"
+          ]
+        }
+      },
+      {
+        "desc": "How many sons did Abraham have?",
+        "refs": {
+          "Two sons": [
+            "Galatians 4:22"
+          ],
+          "Only one son": [
+            "Hebrews 11:17"
+          ]
+        }
+      },
+      {
+        "desc": "Was Keturah Abraham's wife of concubine?",
+        "refs": {
+          "She was his wife": [
+            "Genesis 25:1"
+          ],
+          "She was his concubine": [
+            "1 Chronicles 1:32"
+          ]
+        }
+      },
+      {
+        "desc": "Did Abraham's children require interposition of Providence?",
+        "refs": {
+          "Abraham begat a son when he was a hundred years old, by the interposition of providence": [
+            "Genesis 21:2",
+            "Romans 4:19",
+            "Hebrews 11:12"
+          ],
+          "Abraham begat six children more afterward without help": [
+            "Genesis 25:1-2"
+          ]
+        }
+      },
+      {
+        "desc": "Who bought the sepulchre from Hamor?",
+        "refs": {
+          "Jacob": [
+            "Joshua 24:32"
+          ],
+          "Abraham": [
+            "Acts 7:16"
+          ]
+        }
+      },
+      {
+        "desc": "Was Canaan promised and given to Abraham and his seed?",
+        "refs": {
+          "God promised Abraham and his seed Canaan forever": [
+            "Genesis 13:14-15",
+            "Genesis 13:17",
+            "Genesis 17:8"
+          ],
+          "Abraham and his seed never received the promised land": [
+            "Acts 7:5",
+            "Hebrews 11:9",
+            "Hebrews 11:13"
+          ]
+        }
+      },
+      {
+        "desc": "Who did Elhanan kill?",
+        "refs": {
+          "Goliath (in the original pre-translated text, not shown below)": [
+            "2 Samuel 21:19"
+          ],
+          "Goliath's brother": [
+            "1 Chronicles 20:5"
+          ]
+        }
+      },
+      {
+        "desc": "When did Ahaziah begin to reign?",
+        "refs": {
+          "The 12th year of Joram": [
+            "2 Kings 8:25"
+          ],
+          "The 11th year of Joram": [
+            "2 Kings 9:29"
+          ]
+        }
+      },
+      {
+        "desc": "How many children did Michal have?",
+        "refs": {
+          "No children": [
+            "2 Samuel 6:23"
+          ],
+          "Five children": [
+            "2 Samuel 21:8"
+          ]
+        }
+      },
+      {
+        "desc": "Did God or Satan tempt David to number the people of Israel?",
+        "refs": {
+          "God tempted David": [
+            "2 Samuel 24:1"
+          ],
+          "Satan tempted David": [
+            "1 Chronicles 21:1"
+          ]
+        }
+      },
+      {
+        "desc": "How many men did Israel and Judah have?",
+        "refs": {
+          "Israel had 800,000 and Judah 500,000": [
+            "2 Samuel 24:9"
+          ],
+          "Israel had 1,100,000 and Judah 470,000": [
+            "1 Chronicles 21:5"
+          ]
+        }
+      },
+      {
+        "desc": "Did David sin by counting the people?",
+        "refs": {
+          "David sinned in numbering the people": [
+            "2 Samuel 24:10"
+          ],
+          "David never sinned, except in the matter of Uriah": [
+            "1 Kings 15:5"
+          ]
+        }
+      },
+      {
+        "desc": "How many years of famine for David's sin?",
+        "refs": {
+          "Seven years of famine": [
+            "2 Samuel 24:13"
+          ],
+          "Three years of famine": [
+            "1 Chronicles 21:11-12"
+          ]
+        }
+      },
+      {
+        "desc": "How many horsemen did David take?",
+        "refs": {
+          "David took 700 horsement": [
+            "2 Samuel 8:4"
+          ],
+          "David took 7,000 horsemen": [
+            "1 Chronicles 18:4"
+          ]
+        }
+      },
+      {
+        "desc": "How much did David pay for the threshing floor?",
+        "refs": {
+          "50 shekels of silver": [
+            "2 Samuel 24:24"
+          ],
+          "600 shekels of gold": [
+            "1 Chronicles 21:25"
+          ]
+        }
+      },
+      {
+        "desc": "How long should David's throne endure?",
+        "refs": {
+          "David's throne was to endure forever": [
+            "Psalms 89:35-37"
+          ],
+          "David's throne was cast down": [
+            "Psalms 89:44"
+          ]
+        }
+      },
+      {
+        "desc": "Are Jesus Christ and God equal?",
+        "refs": {
+          "Christ is equal with God": [
+            "John 10:30",
+            "Philippians 2:5"
+          ],
+          "Christ is not equal with God": [
+            "John 14:28",
+            "Matthew 24:36"
+          ]
+        }
+      },
+      {
+        "desc": "Is Jesus all-powerful?",
+        "refs": {
+          "Jesus is all-powerful": [
+            "Matthew 28:18",
+            "John 3:15"
+          ],
+          "Jesus is not all-powerful": [
+            "Mark 6:5"
+          ]
+        }
+      },
+      {
+        "desc": "Was the law superceded by the Christian dispensation?",
+        "refs": {
+          "The law was superceded": [
+            "Luke 16:16",
+            "Ephesians 2:15",
+            "Romans 7:6"
+          ],
+          "The law was not superceded": [
+            "Matthew 5:17-19"
+          ]
+        }
+      },
+      {
+        "desc": "Was Jesus' mission peace?",
+        "refs": {
+          "Christ's mission was peace": [
+            "Luke 2:13-14"
+          ],
+          "Christ's mission was not peace": [
+            "Matthew 10:34"
+          ]
+        }
+      },
+      {
+        "desc": "Did Jesus receive testimony from men?",
+        "refs": {
+          "Christ did not receive testimony from men": [
+            "John 5:33-34"
+          ],
+          "Christ received testimony form men": [
+            "John 15:27"
+          ]
+        }
+      },
+      {
+        "desc": "Is Jesus' witness of himself true?",
+        "refs": {
+          "Christ's witness of himself is true": [
+            "John 8:14",
+            "John 8:18"
+          ],
+          "Christ's witness of himself is not true": [
+            "John 5:31"
+          ]
+        }
+      },
+      {
+        "desc": "Did Jesus lay down his life for friends or enemies?",
+        "refs": {
+          "Christ laid down his life for his friends": [
+            "John 15:13",
+            "John 10:11"
+          ],
+          "Christ laid down his life for his enemies": [
+            "Romans 5:10"
+          ]
+        }
+      },
+      {
+        "desc": "Was it lawful for the Jews to kill Jesus?",
+        "refs": {
+          "It was lawful for the Jews to put Christ to death": [
+            "John 19:7"
+          ],
+          "It was not lawful for the Jews to put Christ to death": [
+            "John 18:31"
+          ]
+        }
+      },
+      {
+        "desc": "Are children punished for the sins of their parents?",
+        "refs": {
+          "Children are punished": [
+            "Exodus 20:5"
+          ],
+          "Children are not punished": [
+            "Ezekiel 18:20"
+          ]
+        }
+      },
+      {
+        "desc": "Is man justified by faith alone?",
+        "refs": {
+          "Man is justified by faith alone": [
+            "Romans 3:20",
+            "Galatians 2:16",
+            "Galatians 3:11-12",
+            "Romans 4:2"
+          ],
+          "Faith alone is not enough": [
+            "James 2:21",
+            "James 2:24",
+            "Romans 2:13"
+          ]
+        }
+      },
+      {
+        "desc": "Can you fall from grace?",
+        "refs": {
+          "It is impossible to fall from grace": [
+            "John 10:28",
+            "Romans 8:38-39"
+          ],
+          "It is possible to fall from grace": [
+            "Ezekiel 18:24",
+            "Hebrews 6:4-6",
+            "2 Peter 2:20-21"
+          ]
+        }
+      },
+      {
+        "desc": "Is anybody without sin?",
+        "refs": {
+          "Nobody is without sin": [
+            "1 Kings 8:46",
+            "Proverbs 20:9",
+            "Ecclesiastes 7:20",
+            "Romans 3:10"
+          ],
+          "Christians are sinless": [
+            "1 John 3:6",
+            "1 John 3:8",
+            "1 John 3:9"
+          ]
+        }
+      },
+      {
+        "desc": "Are the dead resurrected?",
+        "refs": {
+          "There is to be a resurrection of the dead": [
+            "1 Corinthians 15:52",
+            "Revelation 20:12-13",
+            "Luke 20:37",
+            "1 Corinthians 15:16"
+          ],
+          "There is to be no resurrection of the dead": [
+            "Job 7:9",
+            "Ecclesiastes 9:5",
+            "Isaiah 26:14"
+          ]
+        }
+      },
+      {
+        "desc": "Are reward and punishment bestowed in this world?",
+        "refs": {
+          "Reward and punishment to be bestowed in this world": [
+            "Proverbs 11:31"
+          ],
+          "Reward and punishment to be bestowed in the next world": [
+            "Revelation 20:12",
+            "Matthew 16:27",
+            "2 Corinthians 5:10"
+          ]
+        }
+      },
+      {
+        "desc": "Is annihilation or endless misery the portion of manking?",
+        "refs": {
+          "Annihilation": [
+            "Job 3:11",
+            "Job 3:13-17",
+            "Job 3:19-22",
+            "Ecclesiastes 9:5",
+            "Ecclesiastes 9:10",
+            "Ecclesiastes 3:19-20"
+          ],
+          "Endless misery": [
+            "Matthew 25:46",
+            "Revelation 20:10",
+            "Revelation 20:15",
+            "Revelation 14:11",
+            "Daniel 12:2"
+          ]
+        }
+      },
+      {
+        "desc": "Will the Earth ever be destroyed?",
+        "refs": {
+          "The Earth is to be destroyed": [
+            "2 Peter 3:10",
+            "Hebrews 1:11",
+            "Revelation 20:11"
+          ],
+          "The Earth will never be destroyed": [
+            "Psalms 104:5",
+            "Ecclesiastes 1:4"
+          ]
+        }
+      },
+      {
+        "desc": "Does evil happen to the godly?",
+        "refs": {
+          "No evil shall happen to the godly": [
+            "Proverbs 12:21",
+            "1 Peter 3:13"
+          ],
+          "Evil does happen to the godly": [
+            "Hebrews 12:6",
+            "Job 2:3",
+            "Job 2:7"
+          ]
+        }
+      },
+      {
+        "desc": "Are good and prosperity or misery and destitution the lot of the godly??",
+        "refs": {
+          "Good and propsperity": [
+            "Proverbs 12:21",
+            "Psalms 37:28",
+            "Psalms 37:32-33",
+            "Psalms 37:37",
+            "Psalms 1:1",
+            "Psalms 1:3",
+            "Genesis 39:2",
+            "Job 42:12"
+          ],
+          "Misery and destitution": [
+            "Hebrews 11:37-38",
+            "Revelation 7:14",
+            "2 Timothy 3:12",
+            "Luke 21:17"
+          ]
+        }
+      },
+      {
+        "desc": "Is worldly prosperity a reward or a curse?",
+        "refs": {
+          "A reward for the righteous and a blessing": [
+            "Mark 10:29-30",
+            "Psalms 37:25",
+            "Psalms 112:1",
+            "Psalms 112:3",
+            "Job 22:23-24",
+            "Proverbs 15:6"
+          ],
+          "A curse and a bar to future reward": [
+            "Luke 6:20",
+            "Luke 6:24",
+            "Matthew 6:19",
+            "Matthew 6:21",
+            "Luke 16:22",
+            "Matthew 19:24",
+            "Luke 6:24"
+          ]
+        }
+      },
+      {
+        "desc": "Is the Christian yoke easy?",
+        "refs": {
+          "It is easy": [
+            "Matthew 11:28-30"
+          ],
+          "It is not easy": [
+            "John 16:33",
+            "2 Timothy 3:12",
+            "Hebrews 12:6",
+            "Hebrews 12:8"
+          ]
+        }
+      },
+      {
+        "desc": "Is the fruit of God's spirit love and gentleness or fury and vengeance?",
+        "refs": {
+          "Love and gentleness": [
+            "Galatians 5:22"
+          ],
+          "Fury and vengeance": [
+            "Judges 15:14",
+            "1 Samuel 18:10-11"
+          ]
+        }
+      },
+      {
+        "desc": "Do the wicked live long?",
+        "refs": {
+          "Longevity enjoyed by the wickeg": [
+            "Job 21:7-8",
+            "Psalms 17:14",
+            "Ecclesiastes 8:12",
+            "Isaiah 65:20"
+          ],
+          "Longevity denied to the wicked": [
+            "Ecclesiastes 8:13",
+            "Psalms 55:23",
+            "Proverbs 10:27",
+            "Job 36:14",
+            "Ecclesiastes 7:17"
+          ]
+        }
+      },
+      {
+        "desc": "Are poverty or riches a blessing?",
+        "refs": {
+          "Poverty is a blessing": [
+            "Luke 6:20",
+            "Luke 6:24",
+            "James 2:5"
+          ],
+          "Riches are a blessing": [
+            "Proverbs 10:15",
+            "Job 22:23-24",
+            "Job 42:12"
+          ],
+          "Neither are a blessing": [
+            "Proverbs 30:8-9"
+          ]
+        }
+      },
+      {
+        "desc": "Is wisdom a source of enjoyment or grief?",
+        "refs": {
+          "Enjoyment": [
+            "Proverbs 3:13",
+            "Proverbs 3:17"
+          ],
+          "Vexation, grief, and sorry": [
+            "Ecclesiastes 1:17-18"
+          ]
+        }
+      },
+      {
+        "desc": "Is a good name a blessing or curse?",
+        "refs": {
+          "A blessing": [
+            "Ecclesiastes 7:1",
+            "Proverbs 22:1"
+          ],
+          "A curse": [
+            "Luke 6:26"
+          ]
+        }
+      },
+      {
+        "desc": "Is it okay to laugh?",
+        "refs": {
+          "Laughter commended": [
+            "Ecclesiastes 3:1",
+            "Ecclesiastes 3:4",
+            "Ecclesiastes 8:15"
+          ],
+          "Laughter condemned": [
+            "Luke 6:25",
+            "Ecclesiastes 7:3-4"
+          ]
+        }
+      },
+      {
+        "desc": "Is there a remedy for foolishness?",
+        "refs": {
+          "Yes, a rod of correction": [
+            "Proverbs 22:15"
+          ],
+          "There is no remedy for foolishness": [
+            "Proverbs 27:22"
+          ]
+        }
+      },
+      {
+        "desc": "Should a fool be answered according to his folly?",
+        "refs": {
+          "Yes": [
+            "Proverbs 26:5"
+          ],
+          "No": [
+            "Proverbs 26:4"
+          ]
+        }
+      },
+      {
+        "desc": "Is temptation desired?",
+        "refs": {
+          "Temptation to be desired": [
+            "James 1:2"
+          ],
+          "Temptation not to be desired": [
+            "Matthew 6:13"
+          ]
+        }
+      },
+      {
+        "desc": "Is prophecy a sure thing?",
+        "refs": {
+          "Prophecy is sure": [
+            "2 Peter 1:19"
+          ],
+          "Prophecy is not sure": [
+            "Jeremiah 18:7-10"
+          ]
+        }
+      },
+      {
+        "desc": "How many years will men live?",
+        "refs": {
+          "Man's life was to be one hundred and twenty years": [
+            "Genesis 6:3",
+            "Psalms 90:10"
+          ],
+          "Man's life is but seventy years": [
+            "Psalms 90:10"
+          ]
+        }
+      },
+      {
+        "desc": "Is every animal afraid of man?",
+        "refs": {
+          "The fear of man was to be upon every beast": [
+            "Genesis 9:2"
+          ],
+          "The fear of man is not upon the lion": [
+            "Proverbs 30:30"
+          ]
+        }
+      },
+      {
+        "desc": "Are miracles proof of divine mission?",
+        "refs": {
+          "Miracles are proof of divine missions": [
+            "Matthew 11:2-5",
+            "John 3:2",
+            "Exodus 14:31"
+          ],
+          "Miracles are not proof of divine mission": [
+            "Exodus 7:10-12",
+            "Deuteronomy 13:1-3",
+            "Luke 11:19"
+          ]
+        }
+      },
+      {
+        "desc": "Was Moses meek or cruel?",
+        "refs": {
+          "Moses was a very meek man": [
+            "Numbers 12:3"
+          ],
+          "Moses was a very cruel man": [
+            "Numbers 31:15",
+            "Numbers 31:17"
+          ]
+        }
+      },
+      {
+        "desc": "Did anybody ascend into heaven?",
+        "refs": {
+          "Elijah went up to heaven": [
+            "2 Kings 2:11"
+          ],
+          "None but Christ ever ascended into heaven": [
+            "John 3:13"
+          ]
+        }
+      },
+      {
+        "desc": "Is scripture inspired?",
+        "refs": {
+          "All scripture is inspired": [
+            "2 Timothy 3:16"
+          ],
+          "Only some scripture is inspired": [
+            "1 Corinthians 7:6",
+            "1 Corinthians 7:12",
+            "2 Corinthians 11:17"
+          ]
+        }
+      }
+    ]
   }
 }
