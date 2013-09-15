@@ -6,7 +6,7 @@ template: index.html
 translated: true
 scripts:
 - http://d3js.org/d3.v3.min.js
-- /scripts/main.js?v=4
+- /scripts/main.js?v=5
 ---
 
 <h1 style="margin-top: -40px;">{% trans %}The Holy Bible{% endtrans %}</h1>
