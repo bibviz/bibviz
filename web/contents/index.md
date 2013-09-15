@@ -39,6 +39,9 @@ scripts:
         </select>
     </div>
     <div>
+        <input id="text-search" placeholder="Search..." style="width: 120px"/>
+    </div>
+    <div>
         <a href="#contradictionList" style="color: white; text-decoration: none;">{% trans %}See full list{% endtrans %} <i class="icon-download"></i></a>
     </div>
 </div>

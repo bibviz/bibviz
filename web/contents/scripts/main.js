@@ -9,6 +9,7 @@ var contraFilters = {
     book: null,         /* Specific book name */
     chapter: null,      /* Specific absolute chapter */
     type: null,         /* Specific contradiction type */
+    search: null,       /* Text to search for via regex */
     refCount: null,     /* Specific range of references */
     crossBook: false,   /* Only show cross-book contradictions */
     colorize: 'Crimson' /* Colorize the arcs */
@@ -183,6 +184,12 @@ function flatRefs(refs) {
 }
 
 function renderContra() {
+    var textSearch = null;
+
+    if (contraFilters.search) {
+        textSearch = new RegExp(contraFilters.search, 'gi');
+    }
+
     var chart = d3.select('#contradictions-chart')
         .selectAll('.arc')
         .data(contra[contraFilters.source].contradictions.filter(function (d) {
@@ -242,6 +249,12 @@ function renderContra() {
                     if (regex && !regex.test(d.desc)) {
                         return false;
                     }
+                }
+            }
+
+            if (textSearch !== null) {
+                if (!textSearch.test(d.desc)) {
+                    return false;
                 }
             }
 
@@ -575,6 +588,19 @@ d3.json('/data/kjv.json', function (err, json) {
 
             // Set the filter
             updateHash({colorize: this.value});
+        });
+
+    d3.select('#text-search')
+        .on('keyup', function () {
+            var text = this.value;
+
+            if (text.length) {
+                contraFilters.search = text;
+            } else {
+                contraFilters.search = null;
+            }
+
+            renderContra();
         });
 });
 
