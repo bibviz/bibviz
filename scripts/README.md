@@ -1,6 +1,6 @@
 Scripts
 =======
-This directory contains scripts used to generate the JSON data. Currently, all data is generated from pages on the Skeptic's Annotated Bible website.
+This directory contains scripts used to generate the JSON data. Currently, all data is generated from pages from various sources, including the Skeptic's Annotated Bible, Infidels.org, and EvilBible.com websites.
 
 Installation
 ------------
