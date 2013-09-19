@@ -15,6 +15,8 @@ var contraFilters = {
     colorize: 'Crimson' /* Colorize the arcs */
 };
 
+var searchHashTimer = null;
+
 if (!window.maxArcs) {
     var maxArcs = 10;
 }
@@ -60,6 +62,8 @@ function setHash(values) {
             hashArray.push(keys[i] + ':' + values[keys[i]].replace(' ', '+'));
         }
     }
+
+    hashArray.sort();
 
     if (window.history && window.history.replaceState) {
         var base = window.location.href.split('#')[0];
@@ -127,6 +131,11 @@ function setFiltersFromHash() {
     if (_parsedHash.colorize) {
         contraFilters.colorize = _parsedHash.colorize;
         updateSelect('color-select', contraFilters.colorize);
+    }
+
+    if (_parsedHash.search) {
+        contraFilters.search = _parsedHash.search;
+        document.getElementById('text-search').value = contraFilters.search;
     }
 }
 
@@ -601,6 +610,14 @@ d3.json('/data/kjv.json', function (err, json) {
             }
 
             renderContra();
+
+            if (searchHashTimer) {
+                clearTimeout(searchHashTimer);
+            }
+
+            searchHashTimer = setTimeout(function () {
+                updateHash({search: text.length ? text : null});
+            }, 500);
         });
 });
 
