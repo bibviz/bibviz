@@ -1,6 +1,6 @@
 ---
-title: BibViz Project - Bible Contradictions, Misogyny, Violence, Inaccuracies
-description: A beautiful and interactive resource to explore negative aspects of the Bible.
+title: BibViz Project - Bible Contradictions, Misogyny, Violence, Inaccuracies interactively visualized
+description: A beautiful and interactive resource to explore Bible contradictions, cruelty and other negative aspects of the Bible
 image: /img/square.png
 template: index.html
 translated: true
@@ -106,7 +106,7 @@ scripts:
 <div class="footer">
     <div>
         <p>
-            {% trans %}This website aspires to be a beautiful and interactive resource for skeptics and believers alike to explore some of the more negative aspects of holy books.<br/>It was heavily inspired by the <a href="http://www.project-reason.org/gallery3/image/105/">Reason Project's poster of biblical contradictions</a>, which in turn was inspired by <a href="http://www.chrisharrison.net/index.php/Visualizations/BibleViz">Chris Harrison's Bible Visualizations</a>.{% endtrans %}
+            {% trans %}This website aspires to be a beautiful and interactive resource for skeptics and believers alike to explore some of the more negative aspects of holy books, such as Bible contradictions.<br/>It was heavily inspired by the <a href="http://www.project-reason.org/gallery3/image/105/">Reason Project's poster of biblical contradictions</a>, which in turn was inspired by <a href="http://www.chrisharrison.net/index.php/Visualizations/BibleViz">Chris Harrison's Bible Visualizations</a>.{% endtrans %}
         </p>
         <p>
             {% trans %}Many of the contradictions above stem from a literal interpretation of the stories in the Bible. Some verses may be mistranslations, allegories, exaggerations, etc and can be interpreted in the context of the society in which they were written, rewritten, or otherwise modified over time. Considering that 46% of Americans believe in a literal interpretation of Genesis (and probably other portions of the Bible) and the fact that many sects disagree on which parts to take literally, it seems reasonable to include these contradictions based on literal interpretation.{% endtrans %}
@@ -122,8 +122,8 @@ scripts:
         <div class="block">
             {% trans %}Data for the charts were collected from copyrighted material by the <a href="http://www.skepticsannotatedbible.com">Skeptic's Annotated Bible</a>.{% endtrans %}
         </div>
-        <div class="block">
-            {% trans %}This website is free and open source. <a href="https://github.com/danielgtaylor/bibviz">View and contribute to the project</a> on <i class="icon-github-alt"></i> Github!{% endtrans %}
+        <div class="block" itemscope itemtype="http://schema.org/Code">
+            {% trans %}This website is free and open source. <a href="https://github.com/danielgtaylor/bibviz" itemprop="codeRepository">View and contribute to the project</a> on <i class="icon-github-alt"></i> Github!{% endtrans %}
         </div>
         <div class="block">
             {% trans %}Quotes taken from the Authorized King James Version from 1769, which is a public domain work.{% endtrans %}

@@ -8,9 +8,9 @@
 {% endblock %}
 
 {% block content %}
-    <h2>{{ contra.desc }} <a class="btn btn-small" style="position: relative; top: -4px; font-size: 60%;" href="{{ category.url }}{{ contra.url }}"><i class="icon-external-link"></i> View original</a></h2>
+    <h2>{{ contra.desc }} <a class="btn btn-small" href="/" style="position: relative; top: -4px; font-size: 60%;"><i class="icon-arrow-left"></i> View all</a> <a class="btn btn-small" style="position: relative; top: -4px; font-size: 60%;" href="{{ category.url }}{{ contra.url }}"><i class="icon-external-link"></i> View original</a></h2>
     <svg id="contradictions-chart" width="1200" height="500"></svg>
-    <div class="left article contra-block" style="width: 800px; margin-left: 160px">
+    <div class="left article contra-block" style="width: 800px; margin-left: 160px" itemprop="articleBody">
         <p>This Bible contradiction is from the <a href="{{ category.url }}{{ contra.url }}">{{ category.desc }}</a>.</p>
 
         <h2>Verses</h2>
@@ -59,8 +59,6 @@
                 (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
             })();
         </script>
-        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
     </div>
 {% endblock %}
 

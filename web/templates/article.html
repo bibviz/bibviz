@@ -15,8 +15,8 @@
         {% endfor %}
         <a id="feedButton" href="/atom.xml"><i class="icon-rss-sign"></i> Subscribe</a>
     </div>
-    <div class="left article" style="width: 800px">
-        <div class="right">{{ moment(page.metadata.date).format('D MMMM YYYY') }}</div>
+    <div class="left article" style="width: 800px" itemprop="articleBody">
+        <div class="right" itemprop="datePublished">{{ moment(page.metadata.date).format('D MMMM YYYY') }}</div>
         {% md page.markdown %}
         <div class="right">
             {% trans %}Posted by {{ page.metadata.author }}{% endtrans %}
@@ -48,8 +48,6 @@
                 (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
             })();
         </script>
-        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
     </div>
 {% endblock %}
 
