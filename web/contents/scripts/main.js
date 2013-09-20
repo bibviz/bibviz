@@ -152,6 +152,7 @@ function newTab() {
 function getAbsoluteChapter(verse) {
     var parts = /^(\d?\s?[a-z]+)[\s.:]*(\d*):?(\d*)[-]?(\d*)/i.exec(verse);
     //console.log(parts);
+    if (parts === null) return;
 
     var chapter = bookToChapter[parts[1]];
     chapter = (chapter === undefined) ? bookToChapter[parts[1] + 's'] : chapter;
