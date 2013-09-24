@@ -1,6 +1,6 @@
 BibViz Project
 ==============
-A project to visualize negative aspects of the Bible in a way that is not only visually appealing but that makes exploring those aspects of the book quick and intuitive. The main focus of the project is Bible contradictions, but it also highlights scientific and historical inaccuracies, cruelty & violence, misogyny, and homophobia.
+A project to visualize negative aspects of the Bible in a way that is not only visually appealing but that makes exploring those aspects of the book quick and intuitive. The main focus of the project is [Bible contradictions](http://bibviz.com/), but it also highlights biblical scientific and historical inaccuracies, [cruelty & violence in the Bible](http://bibviz.com/), [misogyny in the Bible](http://bibviz.com/), and [homophobia in the Bible](http://bibviz.com/).
 
 Data for the website is generated from various sources, including the Skeptic's Annotated Bible, Infidels.org, EvilBible.com, etc. See the `scripts` directory for how each piece was generated. Note that some information is managed by hand as not everything can be generated from the source pages.
 
