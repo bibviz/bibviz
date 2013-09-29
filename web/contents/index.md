@@ -77,6 +77,36 @@ scripts:
 <blockquote class="poll">{% trans %}The large majority of Americans -- 77% of the adult population -- identify with a Christian religion... Mormons are by far the most religious of any group.{% endtrans %}<div><a href="http://www.gallup.com/poll/159548/identify-christian.aspx">{% trans %}Gallup (2012){% endtrans %}</a></div></blockquote>
 <blockquote class="poll" style="float: right;">{% trans %}Sixty-nine percent of American adults are very or moderately religious, based on self-reports of the importance of religion in their daily lives and attendance at religious services.{% endtrans %}<div><a href="http://www.gallup.com/poll/159050/seven-americans-moderately-religious.aspx">{% trans %}Gallup (2012){% endtrans %}</a></div></blockquote>
 <div class="clear"></div>
+<h3>{% trans %}BibViz Merchandise{% endtrans %}</h3>
+<div>
+    <div class="poster">
+        <a href="http://www.zazzle.com/bible_contradictions_poster_14_x_24-228921555189929759?rf=238372057425685940" style="float:left"><img height="200" src="/blog/bible-contradictions-poster/bible-contradictions-poster.png"/></a>
+        <h4>Bible Contradictions Poster 1</h4>
+        <h5>
+            14" x 24"
+        </h5>
+        <p>
+            Contradictions, violence, misogyny, homophobia and poll information on a poster.
+        </p>
+        <p>
+            <a class="btn btn-small" href="http://www.zazzle.com/bible_contradictions_poster_14_x_24-228921555189929759?rf=238372057425685940">{% trans %}Buy Now{% endtrans %}</a>
+        </p>
+    </div>
+    <div class="poster">
+        <a href="http://www.zazzle.com/bible_contradictions_poster_14_x_22-228252201328757395?rf=238372057425685940" style="float:left"><img height="200" src="/blog/bible-contradictions-poster/bible-contradictions-poster2.png"/></a>
+        <h4>Bible Contradictions Poster 2</h4>
+        <h5>
+            14" x 22"
+        </h5>
+        <p>
+            Over 400 contradictions charted and listed on a poster.
+        </p>
+        <p>
+            <a class="btn btn-small" href="http://www.zazzle.com/bible_contradictions_poster_14_x_22-228252201328757395?rf=238372057425685940">{% trans %}Buy Now{% endtrans %}</a>
+        </p>
+    </div>
+    <div class="clear"></div>
+</div>
 <h3>{% trans %}Interesting Reading Material{% endtrans %} <a id="readingMaterial" href="#readingMaterial"><i class="icon-link"></i></a></h3>
 <div class="books">
     {% import 'amazon.html' as amazon %}
