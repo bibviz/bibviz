@@ -118,6 +118,7 @@ module.exports = (env, done) ->
     class MdTag
         # The tag name
         tags: ['md']
+        autoescape: false
 
         # What to do when the tag is encountered
         parse: (parser, nodes, lexer) ->
@@ -140,9 +141,7 @@ module.exports = (env, done) ->
             tmpl = new Template templateStr, nenv, locals.page.filepath.full
             rendered = tmpl.render locals
 
-            # Set the new markdown content and render to HTML
-            locals.page.markdown = rendered
-            return locals.page.getHtml()
+            return rendered
 
     nenv.addExtension 'MdTag', new MdTag()
 
@@ -235,7 +234,7 @@ module.exports = (env, done) ->
 
             genLangPage = (filepath, done) ->
                 name = filepath.relative
-                page = MarkdownPage.fromFile full: filepath.full, (err, page) ->
+                page = MarkdownPage.fromFile filepath, (err, page) ->
                     page.metadata.filename = "#{env.utils.stripExtension(name)}-#{lang}.html"
                     page.metadata.template = "#{page.metadata.template}-de"
                     rv["#{name}-#{lang}"] = page
