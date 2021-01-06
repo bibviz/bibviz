@@ -1,3 +1,5 @@
+[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/danielgtaylor/bibviz)
+
 BibViz Project
 ==============
 A project to visualize negative aspects of the Bible in a way that is not only visually appealing but that makes exploring those aspects of the book quick and intuitive. The main focus of the project is [Bible contradictions](http://bibviz.com/), but it also highlights biblical scientific and historical inaccuracies, [cruelty & violence in the Bible](http://bibviz.com/), [misogyny in the Bible](http://bibviz.com/), and [homophobia in the Bible](http://bibviz.com/).
