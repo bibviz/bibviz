@@ -2,20 +2,20 @@
 
 {% set articles = env.getArticles(contents) %}
 
-<feed xmlns="http://www.w3.org/2005/Atom">
+<feed xmlns="https://www.w3.org/2005/Atom">
 
         <title>BibViz Project Blog</title>
         <subtitle>A subtitle.</subtitle>
-        <link href="http://bibviz.com/atom.xml" rel="self" />
-        <link href="http://bibviz.com/" />
-        <id>http://bibviz.com/atom.xml</id>
+        <link href="https://bibviz.com/atom.xml" rel="self" />
+        <link href="https://bibviz.com/" />
+        <id>https://bibviz.com/atom.xml</id>
         <updated>{{ articles[0].date.toISOString() }}</updated>
 
         {% for article in articles %}
         <entry>
                 <title>{{ article.title }}</title>
-                <link href="http://bibviz.com{{ article.url }}" />
-                <id>http://bibviz.com{{ article.url }}</id>
+                <link href="https://bibviz.com{{ article.url }}" />
+                <id>https://bibviz.com{{ article.url }}</id>
                 <updated>{{ article.date.toISOString() }}</updated>
                 <content type="html">{{ env.absLinks(article.html) | escape }}</content>
                 <author>
