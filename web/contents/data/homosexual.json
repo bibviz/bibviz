@@ -1,1 +1,536 @@
-[{"name":"Genesis","refs":["9:24","16:49","13:13","19:1-5","19:4-5","19:24-25","38:8-10"],"verseCount":15,"relativeCount":0.6,"url":"gen/gay_list.html"},{"name":"Exodus","refs":[],"verseCount":0,"relativeCount":0,"url":null},{"name":"Leviticus","refs":["18:22","20:13"],"verseCount":2,"relativeCount":0.08,"url":"lev/gay_list.html"},{"name":"Numbers","refs":[],"verseCount":0,"relativeCount":0,"url":null},{"name":"Deuteronomy","refs":["18:22","12:31","22:5","23:17-18"],"verseCount":5,"relativeCount":0.2,"url":"dt/gay_list.html"},{"name":"Joshua","refs":[],"verseCount":0,"relativeCount":0,"url":null},{"name":"Judges","refs":[],"verseCount":0,"relativeCount":0,"url":null},{"name":"Ruth","refs":["1:14"],"verseCount":1,"relativeCount":0.04,"url":"ru/gay_list.html"},{"name":"1 Samuel","refs":["18:1-4","19:2","20:41","20:3-14","20:30","20:31-33","23:16-18"],"verseCount":25,"relativeCount":1,"url":"1sam/gay_list.html"},{"name":"2 Samuel","refs":["1:26","3:27-29"],"verseCount":4,"relativeCount":0.16,"url":"2sam/gay_list.html"},{"name":"1 Kings","refs":["14:24","15:12","22:43"],"verseCount":3,"relativeCount":0.12,"url":"1kg/gay_list.html"},{"name":"2 Kings","refs":["10:15-17","23:7"],"verseCount":4,"relativeCount":0.16,"url":"2kg/gay_list.html"},{"name":"1 Chronicles","refs":[],"verseCount":0,"relativeCount":0,"url":null},{"name":"2 Chronicles","refs":[],"verseCount":0,"relativeCount":0,"url":null},{"name":"Ezra","refs":[],"verseCount":0,"relativeCount":0,"url":null},{"name":"Nehemiah","refs":[],"verseCount":0,"relativeCount":0,"url":null},{"name":"Esther","refs":[],"verseCount":0,"relativeCount":0,"url":null},{"name":"Job","refs":[],"verseCount":0,"relativeCount":0,"url":null},{"name":"Psalms","refs":[],"verseCount":0,"relativeCount":0,"url":null},{"name":"Proverbs","refs":[],"verseCount":0,"relativeCount":0,"url":null},{"name":"Ecclesiastes","refs":[],"verseCount":0,"relativeCount":0,"url":null},{"name":"Song of Solomon","refs":[],"verseCount":0,"relativeCount":0,"url":null},{"name":"Isaiah","refs":["1:10-17","3:9"],"verseCount":9,"relativeCount":0.36,"url":"is/gay_list.html"},{"name":"Jeremiah","refs":["23:14","18:22","18:10-13","18:22","16:49-50","33:26"],"verseCount":10,"relativeCount":0.4,"url":"jer/gay_list.html"},{"name":"Lamentations","refs":[],"verseCount":0,"relativeCount":0,"url":null},{"name":"Ezekiel","refs":[],"verseCount":0,"relativeCount":0,"url":null},{"name":"Daniel","refs":["11:37"],"verseCount":1,"relativeCount":0.04,"url":"dan/gay_list.html"},{"name":"Hosea","refs":[],"verseCount":0,"relativeCount":0,"url":null},{"name":"Joel","refs":[],"verseCount":0,"relativeCount":0,"url":null},{"name":"Amos","refs":[],"verseCount":0,"relativeCount":0,"url":null},{"name":"Obadiah","refs":[],"verseCount":0,"relativeCount":0,"url":null},{"name":"Jonah","refs":[],"verseCount":0,"relativeCount":0,"url":null},{"name":"Micah","refs":[],"verseCount":0,"relativeCount":0,"url":null},{"name":"Nahum","refs":[],"verseCount":0,"relativeCount":0,"url":null},{"name":"Habakkuk","refs":[],"verseCount":0,"relativeCount":0,"url":null},{"name":"Zephaniah","refs":[],"verseCount":0,"relativeCount":0,"url":null},{"name":"Haggai","refs":[],"verseCount":0,"relativeCount":0,"url":null},{"name":"Zechariah","refs":[],"verseCount":0,"relativeCount":0,"url":null},{"name":"Malachi","refs":[],"verseCount":0,"relativeCount":0,"url":null},{"name":"Matthew","refs":["8:5-13","10:14-15","19:12"],"verseCount":12,"relativeCount":0.48,"url":"mt/gay_list.html"},{"name":"Mark","refs":[],"verseCount":0,"relativeCount":0,"url":null},{"name":"Luke","refs":["10:10-12","17:34-35"],"verseCount":5,"relativeCount":0.2,"url":"lk/gay_list.html"},{"name":"John","refs":[],"verseCount":0,"relativeCount":0,"url":"jn/gay_list.html"},{"name":"Acts","refs":["8:26-38"],"verseCount":13,"relativeCount":0.52,"url":"acts/gay_list.html"},{"name":"Romans","refs":["1:26-28","1:31-32"],"verseCount":5,"relativeCount":0.2,"url":"rom/gay_list.html"},{"name":"1 Corinthians","refs":["6:9-10"],"verseCount":2,"relativeCount":0.08,"url":"1cor/gay_list.html"},{"name":"2 Corinthians","refs":[],"verseCount":0,"relativeCount":0,"url":null},{"name":"Galatians","refs":[],"verseCount":0,"relativeCount":0,"url":null},{"name":"Ephesians","refs":[],"verseCount":0,"relativeCount":0,"url":null},{"name":"Philippians","refs":[],"verseCount":0,"relativeCount":0,"url":null},{"name":"Colossians","refs":[],"verseCount":0,"relativeCount":0,"url":null},{"name":"1 Thessalonians","refs":[],"verseCount":0,"relativeCount":0,"url":null},{"name":"2 Thessalonians","refs":[],"verseCount":0,"relativeCount":0,"url":null},{"name":"1 Timothy","refs":["1:10"],"verseCount":1,"relativeCount":0.04,"url":"1tim/gay_list.html"},{"name":"2 Timothy","refs":["3:3"],"verseCount":1,"relativeCount":0.04,"url":"2tim/gay_list.html"},{"name":"Titus","refs":[],"verseCount":0,"relativeCount":0,"url":null},{"name":"Philemon","refs":[],"verseCount":0,"relativeCount":0,"url":null},{"name":"Hebrews","refs":[],"verseCount":0,"relativeCount":0,"url":null},{"name":"James","refs":[],"verseCount":0,"relativeCount":0,"url":null},{"name":"1 Peter","refs":[],"verseCount":0,"relativeCount":0,"url":null},{"name":"2 Peter","refs":["2:6-9"],"verseCount":4,"relativeCount":0.16,"url":"2pet/gay_list.html"},{"name":"1 John","refs":[],"verseCount":0,"relativeCount":0,"url":null},{"name":"2 John","refs":[],"verseCount":0,"relativeCount":0,"url":null},{"name":"3 John","refs":[],"verseCount":0,"relativeCount":0,"url":null},{"name":"Jude","refs":[],"verseCount":0,"relativeCount":0,"url":"jude/gay_list.html"},{"name":"Revelation","refs":["14:1-4","22:15","22:15"],"verseCount":6,"relativeCount":0.24,"url":"rev/gay_list.html"}]
+[
+    {
+      "name": "Genesis",
+      "refs": [
+        "9:24",
+        "16:49",
+        "13:13",
+        "19:1-5",
+        "19:4-5",
+        "19:24-25",
+        "38:8-10"
+      ],
+      "verseCount": 15,
+      "relativeCount": 0.6,
+      "url": "gen/gay_list.html"
+    },
+    {
+      "name": "Exodus",
+      "refs": [],
+      "verseCount": 0,
+      "relativeCount": 0,
+      "url": null
+    },
+    {
+      "name": "Leviticus",
+      "refs": [
+        "18:22",
+        "20:13"
+      ],
+      "verseCount": 2,
+      "relativeCount": 0.08,
+      "url": "lev/gay_list.html"
+    },
+    {
+      "name": "Numbers",
+      "refs": [],
+      "verseCount": 0,
+      "relativeCount": 0,
+      "url": null
+    },
+    {
+      "name": "Deuteronomy",
+      "refs": [
+        "18:22",
+        "12:31",
+        "22:5",
+        "23:17-18"
+      ],
+      "verseCount": 5,
+      "relativeCount": 0.2,
+      "url": "dt/gay_list.html"
+    },
+    {
+      "name": "Joshua",
+      "refs": [],
+      "verseCount": 0,
+      "relativeCount": 0,
+      "url": null
+    },
+    {
+      "name": "Judges",
+      "refs": [],
+      "verseCount": 0,
+      "relativeCount": 0,
+      "url": null
+    },
+    {
+      "name": "Ruth",
+      "refs": [
+        "1:14"
+      ],
+      "verseCount": 1,
+      "relativeCount": 0.04,
+      "url": "ru/gay_list.html"
+    },
+    {
+      "name": "1 Samuel",
+      "refs": [
+        "18:1-4",
+        "19:2",
+        "20:41",
+        "20:3-14",
+        "20:30",
+        "20:31-33",
+        "23:16-18"
+      ],
+      "verseCount": 25,
+      "relativeCount": 1,
+      "url": "1sam/gay_list.html"
+    },
+    {
+      "name": "2 Samuel",
+      "refs": [
+        "1:26",
+        "3:27-29"
+      ],
+      "verseCount": 4,
+      "relativeCount": 0.16,
+      "url": "2sam/gay_list.html"
+    },
+    {
+      "name": "1 Kings",
+      "refs": [
+        "14:24",
+        "15:12",
+        "22:43"
+      ],
+      "verseCount": 3,
+      "relativeCount": 0.12,
+      "url": "1kg/gay_list.html"
+    },
+    {
+      "name": "2 Kings",
+      "refs": [
+        "10:15-17",
+        "23:7"
+      ],
+      "verseCount": 4,
+      "relativeCount": 0.16,
+      "url": "2kg/gay_list.html"
+    },
+    {
+      "name": "1 Chronicles",
+      "refs": [],
+      "verseCount": 0,
+      "relativeCount": 0,
+      "url": null
+    },
+    {
+      "name": "2 Chronicles",
+      "refs": [],
+      "verseCount": 0,
+      "relativeCount": 0,
+      "url": null
+    },
+    {
+      "name": "Ezra",
+      "refs": [],
+      "verseCount": 0,
+      "relativeCount": 0,
+      "url": null
+    },
+    {
+      "name": "Nehemiah",
+      "refs": [],
+      "verseCount": 0,
+      "relativeCount": 0,
+      "url": null
+    },
+    {
+      "name": "Esther",
+      "refs": [],
+      "verseCount": 0,
+      "relativeCount": 0,
+      "url": null
+    },
+    {
+      "name": "Job",
+      "refs": [],
+      "verseCount": 0,
+      "relativeCount": 0,
+      "url": null
+    },
+    {
+      "name": "Psalms",
+      "refs": [],
+      "verseCount": 0,
+      "relativeCount": 0,
+      "url": null
+    },
+    {
+      "name": "Proverbs",
+      "refs": [],
+      "verseCount": 0,
+      "relativeCount": 0,
+      "url": null
+    },
+    {
+      "name": "Ecclesiastes",
+      "refs": [],
+      "verseCount": 0,
+      "relativeCount": 0,
+      "url": null
+    },
+    {
+      "name": "Song of Solomon",
+      "refs": [],
+      "verseCount": 0,
+      "relativeCount": 0,
+      "url": null
+    },
+    {
+      "name": "Isaiah",
+      "refs": [
+        "1:10-17",
+        "3:9"
+      ],
+      "verseCount": 9,
+      "relativeCount": 0.36,
+      "url": "is/gay_list.html"
+    },
+    {
+      "name": "Jeremiah",
+      "refs": [
+        "23:14",
+        "18:22",
+        "18:10-13",
+        "18:22",
+        "16:49-50",
+        "33:26"
+      ],
+      "verseCount": 10,
+      "relativeCount": 0.4,
+      "url": "jer/gay_list.html"
+    },
+    {
+      "name": "Lamentations",
+      "refs": [],
+      "verseCount": 0,
+      "relativeCount": 0,
+      "url": null
+    },
+    {
+      "name": "Ezekiel",
+      "refs": [],
+      "verseCount": 0,
+      "relativeCount": 0,
+      "url": null
+    },
+    {
+      "name": "Daniel",
+      "refs": [
+        "11:37"
+      ],
+      "verseCount": 1,
+      "relativeCount": 0.04,
+      "url": "dan/gay_list.html"
+    },
+    {
+      "name": "Hosea",
+      "refs": [],
+      "verseCount": 0,
+      "relativeCount": 0,
+      "url": null
+    },
+    {
+      "name": "Joel",
+      "refs": [],
+      "verseCount": 0,
+      "relativeCount": 0,
+      "url": null
+    },
+    {
+      "name": "Amos",
+      "refs": [],
+      "verseCount": 0,
+      "relativeCount": 0,
+      "url": null
+    },
+    {
+      "name": "Obadiah",
+      "refs": [],
+      "verseCount": 0,
+      "relativeCount": 0,
+      "url": null
+    },
+    {
+      "name": "Jonah",
+      "refs": [],
+      "verseCount": 0,
+      "relativeCount": 0,
+      "url": null
+    },
+    {
+      "name": "Micah",
+      "refs": [],
+      "verseCount": 0,
+      "relativeCount": 0,
+      "url": null
+    },
+    {
+      "name": "Nahum",
+      "refs": [],
+      "verseCount": 0,
+      "relativeCount": 0,
+      "url": null
+    },
+    {
+      "name": "Habakkuk",
+      "refs": [],
+      "verseCount": 0,
+      "relativeCount": 0,
+      "url": null
+    },
+    {
+      "name": "Zephaniah",
+      "refs": [],
+      "verseCount": 0,
+      "relativeCount": 0,
+      "url": null
+    },
+    {
+      "name": "Haggai",
+      "refs": [],
+      "verseCount": 0,
+      "relativeCount": 0,
+      "url": null
+    },
+    {
+      "name": "Zechariah",
+      "refs": [],
+      "verseCount": 0,
+      "relativeCount": 0,
+      "url": null
+    },
+    {
+      "name": "Malachi",
+      "refs": [],
+      "verseCount": 0,
+      "relativeCount": 0,
+      "url": null
+    },
+    {
+      "name": "Matthew",
+      "refs": [
+        "8:5-13",
+        "10:14-15",
+        "19:12"
+      ],
+      "verseCount": 12,
+      "relativeCount": 0.48,
+      "url": "mt/gay_list.html"
+    },
+    {
+      "name": "Mark",
+      "refs": [],
+      "verseCount": 0,
+      "relativeCount": 0,
+      "url": null
+    },
+    {
+      "name": "Luke",
+      "refs": [
+        "10:10-12",
+        "17:34-35"
+      ],
+      "verseCount": 5,
+      "relativeCount": 0.2,
+      "url": "lk/gay_list.html"
+    },
+    {
+      "name": "John",
+      "refs": [],
+      "verseCount": 0,
+      "relativeCount": 0,
+      "url": "jn/gay_list.html"
+    },
+    {
+      "name": "Acts",
+      "refs": [
+        "8:26-38"
+      ],
+      "verseCount": 13,
+      "relativeCount": 0.52,
+      "url": "acts/gay_list.html"
+    },
+    {
+      "name": "Romans",
+      "refs": [
+        "1:26-28",
+        "1:31-32"
+      ],
+      "verseCount": 5,
+      "relativeCount": 0.2,
+      "url": "rom/gay_list.html"
+    },
+    {
+      "name": "1 Corinthians",
+      "refs": [
+        "6:9-10"
+      ],
+      "verseCount": 2,
+      "relativeCount": 0.08,
+      "url": "1cor/gay_list.html"
+    },
+    {
+      "name": "2 Corinthians",
+      "refs": [],
+      "verseCount": 0,
+      "relativeCount": 0,
+      "url": null
+    },
+    {
+      "name": "Galatians",
+      "refs": [],
+      "verseCount": 0,
+      "relativeCount": 0,
+      "url": null
+    },
+    {
+      "name": "Ephesians",
+      "refs": [],
+      "verseCount": 0,
+      "relativeCount": 0,
+      "url": null
+    },
+    {
+      "name": "Philippians",
+      "refs": [],
+      "verseCount": 0,
+      "relativeCount": 0,
+      "url": null
+    },
+    {
+      "name": "Colossians",
+      "refs": [],
+      "verseCount": 0,
+      "relativeCount": 0,
+      "url": null
+    },
+    {
+      "name": "1 Thessalonians",
+      "refs": [],
+      "verseCount": 0,
+      "relativeCount": 0,
+      "url": null
+    },
+    {
+      "name": "2 Thessalonians",
+      "refs": [],
+      "verseCount": 0,
+      "relativeCount": 0,
+      "url": null
+    },
+    {
+      "name": "1 Timothy",
+      "refs": [
+        "1:10"
+      ],
+      "verseCount": 1,
+      "relativeCount": 0.04,
+      "url": "1tim/gay_list.html"
+    },
+    {
+      "name": "2 Timothy",
+      "refs": [
+        "3:3"
+      ],
+      "verseCount": 1,
+      "relativeCount": 0.04,
+      "url": "2tim/gay_list.html"
+    },
+    {
+      "name": "Titus",
+      "refs": [],
+      "verseCount": 0,
+      "relativeCount": 0,
+      "url": null
+    },
+    {
+      "name": "Philemon",
+      "refs": [],
+      "verseCount": 0,
+      "relativeCount": 0,
+      "url": null
+    },
+    {
+      "name": "Hebrews",
+      "refs": [],
+      "verseCount": 0,
+      "relativeCount": 0,
+      "url": null
+    },
+    {
+      "name": "James",
+      "refs": [],
+      "verseCount": 0,
+      "relativeCount": 0,
+      "url": null
+    },
+    {
+      "name": "1 Peter",
+      "refs": [],
+      "verseCount": 0,
+      "relativeCount": 0,
+      "url": null
+    },
+    {
+      "name": "2 Peter",
+      "refs": [
+        "2:6-9"
+      ],
+      "verseCount": 4,
+      "relativeCount": 0.16,
+      "url": "2pet/gay_list.html"
+    },
+    {
+      "name": "1 John",
+      "refs": [],
+      "verseCount": 0,
+      "relativeCount": 0,
+      "url": null
+    },
+    {
+      "name": "2 John",
+      "refs": [],
+      "verseCount": 0,
+      "relativeCount": 0,
+      "url": null
+    },
+    {
+      "name": "3 John",
+      "refs": [],
+      "verseCount": 0,
+      "relativeCount": 0,
+      "url": null
+    },
+    {
+      "name": "Jude",
+      "refs": [],
+      "verseCount": 0,
+      "relativeCount": 0,
+      "url": "jude/gay_list.html"
+    },
+    {
+      "name": "Revelation",
+      "refs": [
+        "14:1-4",
+        "22:15",
+        "22:15"
+      ],
+      "verseCount": 6,
+      "relativeCount": 0.24,
+      "url": "rev/gay_list.html"
+    }
+  ]
